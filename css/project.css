@@ -1,0 +1,47 @@
+
+#project-section-1{
+  padding-top: 80px;}
+
+.custom-container{
+   padding: 30px;
+  border: 5px solid; /* fallback */
+  border-image: linear-gradient(320deg,  #0181bd, #00ffff ,rgb(81, 148, 131) 3%, rgb(36, 80, 124) 38%, rgb(131, 100, 55) 68%, rgb(65, 51, 51),  #0181bd, #00ffff 98%) 1;
+}
+
+.project-image-div img{
+  height: 500px;
+  width: 500px;
+  border: 2px solid black;
+} 
+
+#footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100vw;
+}
+.wtf img{
+  height: 25px;
+  height: 25px;
+}
+.wtf{
+  display: flex;
+  margin: auto;
+}
+.arrow-btn{
+  width: 50px;
+  height: 50px;
+}
+.wtf {
+    display: flex;
+    justify-content: space-between; /* pushes first to start, second to end */
+    align-items: center; /* vertically center if needed */
+    width: 80%; /* or the width you want the buttons to spread across */
+    margin-top: 50px;
+}
+
+.arrow-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}

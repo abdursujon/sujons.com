@@ -382,31 +382,3 @@ fetch("components/footer.html")
     .then(data => {
         document.getElementById("footer").innerHTML = data;
     });
-    
-// Navigation close button 
-const menuButton = document.querySelector(".custom-navbar-toggler");
-const menuIcon = document.querySelector(".menu-icon");
-menuButton.addEventListener("click", function () {
-  if (menuIcon.src.includes("hamburger-menu.png")) {
-    menuIcon.src = "./assets/close-window.png";
-  } else {
-    menuIcon.src = "./assets/hamburger-menu.png";
-  }
-});
-
-//Home page greetings to website visitor
-function greetTheVisitor() {
-    let greeting;
-    let hour = new Date().getHours();
-    if (hour >= 0 && hour < 12) {
-        greeting = "Good Morning";
-    }
-    else if (hour >= 12 && hour < 18) {
-        greeting = "Good Afternoon"
-    }
-    else {
-        greeting = "Good Evening";
-    }
-    return greeting;
-}
-document.getElementById("demo").innerHTML = "Hi there, " + greetTheVisitor();
