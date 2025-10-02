@@ -11,9 +11,9 @@ const menuButton = document.querySelector(".custom-navbar-toggler");
 const menuIcon = document.querySelector(".menu-icon");
 menuButton.addEventListener("click", function () {
   if (menuIcon.src.includes("hamburger-menu.png")) {
-    menuIcon.src = "./assets/close-window.png";
+    menuIcon.src = "./assets/home/icon/close-window.png";
   } else {
-    menuIcon.src = "./assets/hamburger-menu.png";
+    menuIcon.src = "./assets/home/icon/hamburger-menu.png";
   }
 });
 

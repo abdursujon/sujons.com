@@ -1,0 +1,117 @@
+/* section-1 */
+.about-container{
+    margin:0;
+    padding: 0;
+}
+.section-1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+h1 {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 5rem;
+}
+.learn-more-link {
+    margin:20px;
+}
+.learn-more-link>a {
+    background-color: transparent;
+    color: white;
+    width: 150px;
+    padding:10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-top:20px;
+}
+.learn-more-link>a:hover {
+    background-color: white;
+    color: #007378;
+}
+
+.custom-btn {
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 20px;
+    border: 2px solid white;
+}
+.custom-btn:hover {
+    background: black;
+}
+/*.carousel {*/
+/*    height: 100%;*/
+/*    border: 5px solid white;*/
+/*    border-style: dashed;*/
+/*}*/
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* Section 1*/
+.about-section-1-container{
+    background-color: rgb(34, 34, 34);
+    padding:80px 0px;
+}
+
+.about-profile img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Media  query for extra small, small, and medium devices */
+@media (max-width: 991px) {
+    /* Section 1 */
+    .about-section-1-container{
+        background-color: rgb(34, 34, 34);
+        padding:50px 0px;
+    }
+    h1 {
+        color: white;
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    .carousel {
+        height: 80vh;
+        margin: 0px;
+        margin-top: 0;
+        margin-bottom: 0px;
+        border-style: none;
+    }
+    .carousel-item img {
+        height: 80vh;
+    }
+    .custom-btn {
+        margin: 10px;
+    }
+    .about-profile img{
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    /* section 2 */
+    .about-me-para > p{
+        color:whitesmoke;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

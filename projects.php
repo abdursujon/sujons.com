@@ -2,4 +2,4 @@
 
 $view = new stdClass();
 $view->pageTitle = 'Homepage';
-require_once('Views/projects.phtml');
+require_once('views/projects.phtml');

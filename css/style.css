@@ -661,8 +661,8 @@ button a {
     position: relative;
     display: inline-block;
     background: linear-gradient(90deg, white 20%,  whitesmoke 30%, silver 50%,  rgb(122, 117, 117) 0) var(--_p, 100%)/200% no-repeat;
-    -webkit-background-clip: text;
-    background-clip: text;
+    -webkit-background-clip: background;
+    background-clip: background;
     transition: .4s;
     width: fit-content;
     padding: 5px 15px;
@@ -672,16 +672,19 @@ button a {
         transform: none;
     text-decoration: none;
     --_p: 0%;
-    color:gray;
+    color:black;
     font-weight: bold;
 }
 h2{
     margin-top: 50px;
 }
 /* Footer */
+.footer-container{
+    background-color: rgb(32, 28, 28) !important;;
+}
 .footer-icon {
     padding:5px;
-    margin-top:20px;
+    margin-top:10px;
     margin-bottom:10px;
 }
 .footer-icon img{
