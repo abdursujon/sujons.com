@@ -110,7 +110,7 @@ p {
 .navbar-nav .nav-link {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 16px;
     margin: 5px;
     background: linear-gradient(90deg, #0181bd, #00ffff);
     -webkit-background-clip: text;
@@ -758,18 +758,14 @@ h2 {
         display: block;
         font-size: 1.6rem;
         color: white;
-        /* Stack the titles vertically */
     }
 
     .introduction .title-separator {
         display: none;
-        /* Hide the '|' separator */
     }
 
 }
 
-/* Small devices */
-@media (min-width:576px) {}
 
 /* Medium devices  */
 @media (min-width:768px) {
