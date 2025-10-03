@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sujons.com - Projects</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header Placeholder -->
+    <header id="header-placeholder"></header>
+
+    <main>
+        <!-- Section 1: Projects Carousel -->
+        <section id="project-section-1">
+            <div class="container custom-container gradient-border">
+                <div class="row">
+                    <!-- Left: Image Carousel -->
+                    <div class="col-md-6 d-flex flex-column justify-content-between">
+                        <div class="position-relative project-image-div ">
+                            <img src="assets/projects/project 1/1.png" class="img-fluid" id="carousel-image"
+                                alt="Project image">
+                        </div>
+                        <div class="control-div">
+                            <button class="arrow-btn" onclick="prevImage()" aria-label="Previous image">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                            </button>
+                            <button class="arrow-btn" onclick="nextImage()" aria-label="Next image">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                        <div id="carousel-dots" class="mt-2"></div>
+                    </div>
+                    <!-- Right: Project Info -->
+                    <div class="col-md-6 d-flex flex-column justify-content-between">
+                        <div>
+                            <h2 id="project-title" class="fw-bold"></h2>
+                            <p id="project-desc" class="text-muted"></p>
+                            <p id="tech-stack" class="text-muted"></p>
+                            <a id="launch-link" href="#" target="_blank" class="btn btn-dark">Launch</a>
+                        </div>
+                        <div class="text-end">
+                            <button class="btn btn-outline-secondary mt-3" onclick="prevProject()">Previous
+                                Project</button>
+                            <button class="btn btn-outline-secondary mt-3" onclick="nextProject()">Next Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <footer id="footer-placeholder"></footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/project.js"></script>
+
+</body>
+
+</html>

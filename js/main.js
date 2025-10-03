@@ -1,42 +1,80 @@
+/**
+ * main.js
+ *
+ * This script handles global functionality for the website, including:
+ * - Loading reusable header and footer components.
+ * - Initializing interactive elements like the navigation and skills section.
+ */
+document.addEventListener("DOMContentLoaded", function () {
+    const loadComponent = (url, placeholderId) => {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) throw new Error(`Failed to load ${url}`);
+                return response.text();
+            })
+            .then(data => {
+                const placeholder = document.getElementById(placeholderId);
+                if (placeholder) {
+                    placeholder.innerHTML = data;
+                }
+                // After the header is loaded, initialize its interactive elements.
+                if (placeholderId === 'header-placeholder') {
+                    initializeNavbar();
+                }
+            })
+            .catch(error => console.error('Error loading component:', error));
+    };
 
-//Load common footer html code across different pages 
-fetch("components/footer.html")
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById("footer").innerHTML = data;
-    });
-    
-// Navigation close button 
-const menuButton = document.querySelector(".custom-navbar-toggler");
-const menuIcon = document.querySelector(".menu-icon");
-menuButton.addEventListener("click", function () {
-  if (menuIcon.src.includes("hamburger-menu.png")) {
-    menuIcon.src = "./assets/home/icon/close-window.png";
-  } else {
-    menuIcon.src = "./assets/home/icon/hamburger-menu.png";
-  }
-});
+    // ===================================================================
+    // COMPONENT LOADING
+    // ===================================================================
+    // Load header and footer into their placeholders
+    loadComponent('components/header.html', 'header-placeholder');
+    loadComponent('components/footer.html', 'footer-placeholder');
 
-//Home page greetings to website visitor
-function greetTheVisitor() {
-    let greeting;
-    let hour = new Date().getHours();
-    if (hour >= 0 && hour < 12) {
-        greeting = "Good Morning";
+    function initializeNavbar() {
+        const menuButton = document.querySelector(".custom-navbar-toggler");
+        if (!menuButton) return; // Exit if the button isn't found
+        const menuIcon = menuButton.querySelector("img.menu-icon");
+        menuButton.addEventListener("click", function () {
+            if (menuIcon.src.includes("hamburger-menu.png")) {
+                menuIcon.src = "./assets/home/icon/close-window.png";
+            } else {
+                menuIcon.src = "./assets/home/icon/hamburger-menu.png";
+            }
+        });
     }
-    else if (hour >= 12 && hour < 18) {
-        greeting = "Good Afternoon"
-    }
-    else {
-        greeting = "Good Evening";
-    }
-    return greeting;
-}
-document.getElementById("greeting").innerHTML = "Hi there, " + greetTheVisitor();
 
-// section 3
-document.getElementById("languages").addEventListener("click", function(){
-    document.getElementById("change-skills").innerHTML=`
+    // ===================================================================
+    // GREETING LOGIC (HOME PAGE)
+    // ===================================================================
+    // Displays a time-appropriate greeting.
+    function greetTheVisitor() {
+        let greeting;
+        let hour = new Date().getHours();
+        if (hour >= 0 && hour < 12) {
+            greeting = "Good Morning";
+        }
+        else if (hour >= 12 && hour < 18) {
+            greeting = "Good Afternoon"
+        }
+        else {
+            greeting = "Good Evening";
+        }
+        return greeting;
+    }
+    const greetingElement = document.getElementById("greeting");
+    if (greetingElement) {
+        greetingElement.innerHTML = "Hi there, " + greetTheVisitor();
+    }
+
+    // ===================================================================
+    // SKILLS SECTION (HOME PAGE)
+    // ===================================================================
+    const languagesBtn = document.getElementById("languages");
+    if (languagesBtn) {
+        languagesBtn.addEventListener("click", function () {
+            document.getElementById("change-skills").innerHTML = `
                 <h1 class="skills">SKILLS</h1> 
                 <h2 class="sub-titile">CORE PROGRAMMING</h2>
 
@@ -85,10 +123,14 @@ document.getElementById("languages").addEventListener("click", function(){
                 <strong>Project:</strong> North Trafford GP (Clone)
                 </p>
 
-`});
+`;
+        });
+    }
 
-document.getElementById("database").addEventListener("click", function(){
-    document.getElementById("change-skills").innerHTML=`
+    const databaseBtn = document.getElementById("database");
+    if (databaseBtn) {
+        databaseBtn.addEventListener("click", function () {
+            document.getElementById("change-skills").innerHTML = `
                 <h1 class="skills">SKILLS</h1> 
                 <h2 class="sub-titile">DATABASE</h2>
 
@@ -105,10 +147,14 @@ document.getElementById("database").addEventListener("click", function(){
                 <strong>Project Example:</strong> For the Pet-Watch project, I implemented MySQL to store, manage, and retrieve user data efficiently.
                 </p>
 
-`});
+`;
+        });
+    }
 
-document.getElementById("webdev").addEventListener("click", function(){
-                    document.getElementById("change-skills").innerHTML=`
+    const webdevBtn = document.getElementById("webdev");
+    if (webdevBtn) {
+        webdevBtn.addEventListener("click", function () {
+            document.getElementById("change-skills").innerHTML = `
                 <h1 class="skills">SKILLS</h1>
                 <h2 class="sub-titile">WEB DEVELOPMENT</h2>
 
@@ -153,10 +199,14 @@ document.getElementById("webdev").addEventListener("click", function(){
                 Familiar with React and its ecosystem, capable of building component-based, scalable, and interactive front-end applications.
                 </p>
 
-`});
+`;
+        });
+    }
 
-document.getElementById("desktop-app").addEventListener("click", function(){
-    document.getElementById("change-skills").innerHTML=`
+    const desktopAppBtn = document.getElementById("desktop-app");
+    if (desktopAppBtn) {
+        desktopAppBtn.addEventListener("click", function () {
+            document.getElementById("change-skills").innerHTML = `
               <h1 class="skills">SKILLS</h1>
               <h2 class="sub-title">DESKTOP APPLICATION DEVELOPMENT</h2>
               <h2>C# & .NET</h2>
@@ -178,10 +228,14 @@ document.getElementById("desktop-app").addEventListener("click", function(){
                   on a real client's requirements, using the SCRUM framework. This experience strengthened my skills in agile
                   project management, sprint planning, and team collaboration, while emphasizing the importance of clear
                   communication and iterative development. </p>
-`});
+`;
+        });
+    }
 
-document.getElementById("back-end").addEventListener("click", function(){
-    document.getElementById("change-skills").innerHTML=`
+    const backendBtn = document.getElementById("back-end");
+    if (backendBtn) {
+        backendBtn.addEventListener("click", function () {
+            document.getElementById("change-skills").innerHTML = `
               <h1 class="skills">SKILLS</h1> 
               <h2 class="sub-titile">BACKEND DEVELOPMENT</h2>
 
@@ -248,10 +302,14 @@ document.getElementById("back-end").addEventListener("click", function(){
               and deployment tasks, including using terminal commands and basic shell scripting.
               </p>
 
-`});
+`;
+        });
+    }
 
-document.getElementById("software").addEventListener("click", function(){
-    document.getElementById("change-skills").innerHTML=`
+    const softwareBtn = document.getElementById("software");
+    if (softwareBtn) {
+        softwareBtn.addEventListener("click", function () {
+            document.getElementById("change-skills").innerHTML = `
               <h1 class="skills">SKILLS</h1> 
               <h2 class="sub-titile">SOFTWARE</h2>
 
@@ -304,11 +362,14 @@ document.getElementById("software").addEventListener("click", function(){
               presentations, and development workflows.
               </p>
 
-`});
+`;
+        });
+    }
 
-
-document.getElementById("core").addEventListener("click", function(){
-    document.getElementById("change-skills").innerHTML=`
+    const coreBtn = document.getElementById("core");
+    if (coreBtn) {
+        coreBtn.addEventListener("click", function () {
+            document.getElementById("change-skills").innerHTML = `
               <h1 class="skills">SKILLS</h1> 
               <h2 class="sub-titile">CORE COMPUTING CONCEPTS</h2>
 
@@ -374,11 +435,7 @@ document.getElementById("core").addEventListener("click", function(){
               Knowledge of client-server systems, designing software where clients and servers communicate 
               efficiently to handle requests and manage data.
               </p>
-`});
-
-//Load common footer html code across different pages 
-fetch("components/footer.html")
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById("footer").innerHTML = data;
-    });
+`;
+        });
+    }
+}); // End of DOMContentLoaded
