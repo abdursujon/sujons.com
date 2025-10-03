@@ -746,6 +746,27 @@ h2 {
     hr {
         display: none;
     }
+
+    .effect {
+        color: whitesmoke;
+        /* Change text color on small devices */
+    }
+
+    .introduction>h1 {
+        font-size: 1.5rem;
+        /* Make font smaller on mobile */
+    }
+
+    .introduction .title-main,
+    .introduction .title-sub {
+        display: block;
+        /* Stack the titles vertically */
+    }
+
+    .introduction .title-separator {
+        display: none;
+        /* Hide the '|' separator */
+    }
 }
 
 /* Small devices */
