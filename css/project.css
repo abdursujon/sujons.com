@@ -50,11 +50,9 @@
 /* ===================================================================
    BUTTON STYLES
    =================================================================== */
-/* Common styles for all project page buttons */
-#launch-link,
+/* Previous/Next Project Buttons */
 .btn-outline-secondary {
-    /* Replicating .pointer and .cursor-box styles from style.css */
-    background: transparent;
+    background-color: transparent;
     border: 1px solid white;
     color: white;
     font-family: var(--font-display);
@@ -64,17 +62,33 @@
     padding: 5px 10px;
     transition: all 0.3s ease;
     display: inline-block;
-    /* Ensure proper sizing */
-    width: fit-content;
 }
 
-/* Hover effect for all buttons */
-#launch-link:hover,
 .btn-outline-secondary:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px #646cff50;
     background-color: #2c2c2d50;
-    color: white;
+}
+
+/* Launch Project Button */
+#launch-link {
+    font-family: var(--font-display);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 12px;
+    padding: 6px 12px;
+    /* Slightly larger padding */
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: none;
+    background: linear-gradient(90deg, #0181bd, #00ffff);
+    color: #1a1a1a;
+    /* Dark text for contrast */
+}
+
+#launch-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ffff80;
 }
 
 .text-end {
@@ -199,7 +213,8 @@
         background-image: none;
         border: none;
         border-image: none;
-        padding: 0 5px;
+
+        margin: 0 5px;
         max-height: none;
         /* Remove height constraint on mobile */
         /* Remove height constraint */
