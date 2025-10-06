@@ -54,11 +54,6 @@ h1 {
     background: black;
 }
 
-/*.carousel {*/
-/*    height: 100%;*/
-/*    border: 5px solid white;*/
-/*    border-style: dashed;*/
-/*}*/
 .carousel-caption {
     top: 50%;
     transform: translateY(-50%);
@@ -127,8 +122,8 @@ h1 {
     }
 
     .about-profile img {
-        width: 400px;
-        height: 400px;
+        width: 350px;
+        height: 350px;
         object-fit: cover;
         border-radius: 25px;
         margin-top: 20px;
