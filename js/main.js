@@ -310,53 +310,52 @@ document.addEventListener("DOMContentLoaded", function () {
     if (softwareBtn) {
         softwareBtn.addEventListener("click", function () {
             document.getElementById("change-skills").innerHTML = `
-              <h1 class="skills">SKILLS</h1> 
-              <h2 class="sub-titile">SOFTWARE</h2>
+<h1 class="skills">SKILLS</h1> 
+<h2 class="sub-title">SOFTWARE</h2>
 
-              <h2>DEVELOPMENT TOOLS</h2>
-              <p class="sub-p">INFO</p>
-              <p>
-              Proficient with popular development tools including <strong>PHPStorm</strong>, <strong>Visual Studio Code</strong>, 
-              <strong>Microsoft Visual Studio</strong>, <strong>Eclipse</strong>, <strong>IntelliJ IDEA</strong>, and <strong>Vim</strong>. 
-              These tools help me streamline coding, debugging, and version control across multiple languages and frameworks.
-              </p>
-              <hr>
+<h2>DEVELOPMENT TOOLS</h2>
+<p class="sub-p">INFO</p>
+<p>
+    Proficient with popular development tools including <strong>PHPStorm</strong>, <strong>Visual Studio Code</strong>, 
+    <strong>Microsoft Visual Studio</strong>, <strong>Eclipse</strong>, <strong>IntelliJ IDEA</strong>, and <strong>Vim</strong>. 
+    These tools streamline coding, debugging, and version control across multiple languages and frameworks, improving productivity and workflow efficiency.
+</p>
+<hr>
 
-              <h2>VERSION CONTROL</h2>
-              <p class="sub-p">INFO</p>
-              <p>
-              Experienced with <strong>Git</strong> and <strong>Git Bash</strong> for source code management, 
-              branching, and collaborative workflows.
-              </p>
-              <hr>
+<h2>VERSION CONTROL</h2>
+<p class="sub-p">INFO</p>
+<p>
+    Experienced with <strong>Git</strong> and <strong>Git Bash</strong> for source code management, branching, merging, and collaborative workflows in team projects.
+</p>
+<hr>
 
-              <h2>DESIGN & PROTOTYPING</h2>
-              <p class="sub-p">INFO</p>
-              <p>
-              Experienced with design and UI/UX tools like <strong>Figma</strong>, <strong>Inkscape</strong>, and asset creation software. 
-              I use these to plan interfaces, create wireframes, and develop polished visuals for projects.
-              </p>
-              <hr>
+<h2>DESIGN & PROTOTYPING</h2>
+<p class="sub-p">INFO</p>
+<p>
+    Skilled with design and UI/UX tools such as <strong>Figma</strong> and <strong>Inkscape</strong>, along with asset creation software. 
+    I use these tools to plan interfaces, create wireframes, and develop polished, user-friendly visuals for projects.
+</p>
+<hr>
 
-              <h2>DATABASE & SERVER MANAGEMENT</h2>
-              <p class="sub-p">INFO</p>
-              <p>
-              Skilled with <strong>MySQL</strong> and <strong>XAMPP</strong> for database design and local server configuration. 
-              Familiar with <strong>phpMyAdmin</strong> for schema management and <strong>FileZilla</strong> for FTP deployment.
-              </p>
-              <hr>
+<h2>DATABASE & SERVER MANAGEMENT</h2>
+<p class="sub-p">INFO</p>
+<p>
+    Proficient in <strong>MySQL</strong> and <strong>XAMPP</strong> for database design, querying, and local server configuration. 
+    Familiar with <strong>phpMyAdmin</strong> for schema management and <strong>FileZilla</strong> for FTP deployment of applications.
+</p>
+<hr>
 
-              <h2>PRODUCTIVITY & OFFICE TOOLS</h2>
-              <p class="sub-p">INFO</p>
-              <p>
-              Proficient with <strong>Microsoft Word</strong>, <strong>Excel</strong>, and <strong>PowerPoint</strong> 
-              for documentation, reporting, and presentation of projects.
-              </p>
-              <hr>
+<h2>PRODUCTIVITY & OFFICE TOOLS</h2>
+<p class="sub-p">INFO</p>
+<p>
+    Proficient with <strong>Microsoft Word</strong>, <strong>Excel</strong>, and <strong>PowerPoint</strong> for project documentation, reporting, data analysis, and presentation preparation.
+</p>
+<hr>
 
-              <h2>VIRTUALIZATION & UTILITIES</h2>
-              <p class="sub-p">INFO</p>
-              <p>
+<h2>VIRTUALIZATION & UTILITIES</h2>
+<p class="sub-p">INFO</p>
+<p>
+    Comfortable using <strong>VirtualBox</strong> for virtual machine setup, <strong>OBS Studio</strong> for screen recording, and other
               Comfortable using <strong>VirtualBox</strong> for virtual machine setup, 
               <strong>OBS Studio</strong> for screen recording, and other utilities that support testing, 
               presentations, and development workflows.
@@ -371,70 +370,64 @@ document.addEventListener("DOMContentLoaded", function () {
         coreBtn.addEventListener("click", function () {
             document.getElementById("change-skills").innerHTML = `
               <h1 class="skills">SKILLS</h1> 
-              <h2 class="sub-titile">CORE COMPUTING CONCEPTS</h2>
+<h2 class="sub-title">CORE COMPUTING CONCEPTS</h2>
 
-              <h2>DATA STRUCTURES & ALGORITHMS</h2>
-              <p class="sub-p">INFO</p>
-              <p>
-              Proficient in designing and implementing efficient data structures and algorithms 
-              to solve computational problems and optimize application performance.
-              </p>
-              <hr>
+<h2>DATA STRUCTURES & ALGORITHMS</h2>
+<p class="sub-p">INFO</p>
+<p>
+    Proficient in designing and implementing efficient data structures and algorithms to solve computational problems, optimize application performance, and improve system efficiency.
+</p>
+<hr>
 
-              <h2>DESIGN PATTERNS</h2>
-              <p class="sub-p">INFO</p>
-              <p>
-              Knowledgeable in common design patterns and best practices to create maintainable, reusable, 
-              and scalable software architectures.
-              </p>
-              <hr>
+<h2>DESIGN PATTERNS</h2>
+<p class="sub-p">INFO</p>
+<p>
+    Knowledgeable in common design patterns and best practices to create maintainable, reusable, and scalable software architectures that simplify development and enhance code quality.
+</p>
+<hr>
 
-              <h2>OPERATING SYSTEMS & COMMANDS</h2>
-              <p class="sub-p">INFO</p>
-              <p>
-              Familiar with operating system concepts, file systems, process management, 
-              and system commands for Windows, and Linux. 
-              </p>
-              <hr>
+<h2>OPERATING SYSTEMS & COMMANDS</h2>
+<p class="sub-p">INFO</p>
+<p>
+    Familiar with operating system concepts, including file systems, process management, memory management, and system commands for both Windows and Linux environments.
+</p>
+<hr>
 
-              <h2>AGILE SOFTWARE DEVELOPMENT & SCRUM</h2>
-              <p class="sub-p">INFO</p>
-              <p>
-              Experienced in Agile methodologies, including Scrum, for iterative software development. 
-              Able to manage sprints, stand-ups, and team collaboration to deliver high-quality projects.
-              </p>
-              <hr>
+<h2>AGILE SOFTWARE DEVELOPMENT & SCRUM</h2>
+<p class="sub-p">INFO</p>
+<p>
+    Experienced in Agile methodologies, particularly Scrum, for iterative and adaptive software development. Skilled at managing sprints, facilitating stand-ups, and fostering team collaboration to deliver high-quality software.
+</p>
+<hr>
 
-              <h2>SDLC & WATERFALL</h2>
-              <p class="sub-p">INFO</p>
-              <p>
-              Knowledgeable in Software Development Life Cycle (SDLC) methodologies, including Waterfall, 
-              for planning, analysis, design, implementation, testing, and maintenance of software projects.
-              </p>
-              <hr>
+<h2>SDLC & WATERFALL</h2>
+<p class="sub-p">INFO</p>
+<p>
+    Well-versed in Software Development Life Cycle (SDLC) methodologies, including Waterfall, for systematically planning, analyzing, designing, implementing, testing, and maintaining software projects.
+</p>
+<hr>
 
-              <h2>HUMAN-COMPUTER INTERACTION (HCI)</h2>
-              <p class="sub-p">INFO</p>
-              <p>
-              Understanding of HCI principles, user-centered design, accessibility, and usability 
-              to create intuitive and engaging software interfaces.
-              </p>
-              <hr>
+<h2>HUMAN-COMPUTER INTERACTION (HCI)</h2>
+<p class="sub-p">INFO</p>
+<p>
+    Strong understanding of HCI principles, user-centered design, accessibility, and usability to create intuitive, engaging, and user-friendly software interfaces.
+</p>
+<hr>
 
-              <h2>PROFESSIONAL DEVELOPMENT</h2>
-              <p class="sub-p">INFO</p>
-              <p>
-              Adherence to professional software development practices, including documentation, 
-              version control, testing, and team collaboration for delivering high-quality software solutions.
-              </p>
-              <hr>
+<h2>PROFESSIONAL DEVELOPMENT</h2>
+<p class="sub-p">INFO</p>
+<p>
+    Adherence to professional software development practices, including documentation, version control, testing, and collaborative workflows to ensure high-quality, maintainable software solutions.
+</p>
+<hr>
 
-              <h2>CLIENT-SERVER ARCHITECTURE</h2>
-              <p class="sub-p">INFO</p>
-              <p>
-              Knowledge of client-server systems, designing software where clients and servers communicate 
-              efficiently to handle requests and manage data.
-              </p>
+<h2>CLIENT-SERVER ARCHITECTURE</h2>
+<p class="sub-p">INFO</p>
+<p>
+    Knowledgeable in client-server architecture, designing systems where clients and servers communicate efficiently to handle requests, manage data, and deliver seamless application performance.
+</p>
+<hr>
+
 `;
         });
     }
