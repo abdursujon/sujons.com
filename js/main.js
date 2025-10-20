@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (languagesBtn) {
         languagesBtn.addEventListener("click", function () {
             document.getElementById("change-skills").innerHTML = `
-                <h1 class="skills">SKILLS</h1> 
+                
                 <h2 class="sub-titile">CORE PROGRAMMING</h2>
 
                 <h2>JAVA</h2>
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 and Design Patterns. Currently leading an Agile group project while working on multiple desktop applications.
                 </p>
                 <p class="project-ex">
-                <strong>Project Example:</strong> <a href="https://emilias-della-roma.netlify.app/" target="_blank">Emilia's Della Roma</a>
+                <strong>Project Example:</strong> <a href="https://github.com/abdursujon/sputnik-vehicle-hire" target="_blank">Sputnik Vehicle Hire</a>
                 </p>
                 <hr>
 
@@ -82,18 +82,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 to take applications from concept to completion with a user-first approach.
                 </p>
                 <p class="project-ex">
-                <strong>Tech Stack:</strong> Portfolio Website, Webronics, Emilia's Della Roma, TinCat
+                <strong>Project Example:</strong> <a href="https://emilias-della-roma.netlify.app/" target="_blank">Emilia's Della Roma</a>
                 </p>
                 <hr>
 
                 <h2>PHP</h2>
                 <p class="sub-p">INFO</p>
                 <p>
-                PHP is my go-to language for server-side logic. I am familiar with PHPMailer, authentication systems, 
-                and building secure, scalable back-end solutions.
+                I am specialize in building data-driven, full-stack websites. My primary tool for
+                server-side logic is PHP, which I use in conjunction with SQL databases like SQLite. I
+                follow best practices such as MVC architecture and Object-Oriented Programming (OOP) to
+                create scalable and maintainable code. For the front end, I combine JavaScript,
+                Bootstrap, CSS, and HTML to deliver responsive and interactive user experiences.
                 </p>
                 <p class="project-ex">
-                <strong>Projects:</strong> Emilia's Della Roma, Pet-Watch
+                <strong>Upcoming Project:</strong> Pet Watch (Coming Soon)
                 </p>
                 <hr>
 
@@ -103,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 Familiar with C#, with experience building Windows desktop applications using .NET Forms.
                 </p>
                 <p class="project-ex">
-                <strong>Project:</strong> North Trafford GP (Clone)
+                <strong>Project Example:</strong> <a href="https://github.com/abdursujon/North-Trafford-Group-Practice-Clone/tree/main" target="_blank">North Trafford GP (Clone)</a>
                 </p>
 
 `;
@@ -114,7 +117,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (databaseBtn) {
         databaseBtn.addEventListener("click", function () {
             document.getElementById("change-skills").innerHTML = `
-                <h1 class="skills">SKILLS</h1> 
                 <h2 class="sub-titile">DATABASE</h2>
 
                 <h2>SQL & MySQL</h2>
@@ -138,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (webdevBtn) {
         webdevBtn.addEventListener("click", function () {
             document.getElementById("change-skills").innerHTML = `
-                <h1 class="skills">SKILLS</h1>
+            
                 <h2 class="sub-titile">WEB DEVELOPMENT</h2>
 
                 <h2>HTML & CSS</h2>
@@ -190,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (desktopAppBtn) {
         desktopAppBtn.addEventListener("click", function () {
             document.getElementById("change-skills").innerHTML = `
-              <h1 class="skills">SKILLS</h1>
+             
               <h2 class="sub-title">DESKTOP APPLICATION DEVELOPMENT</h2>
               <h2>C# & .NET</h2>
               <p class="sub-p">INFO</p>
@@ -219,8 +221,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (backendBtn) {
         backendBtn.addEventListener("click", function () {
             document.getElementById("change-skills").innerHTML = `
-              <h1 class="skills">SKILLS</h1> 
-              <h2 class="sub-titile">BACKEND DEVELOPMENT</h2>
+              
+               <h2 class="sub-titile">BACKEND DEVELOPMENT</h2>
 
               <h2>PHP</h2>
               <p class="sub-p">INFO</p>
@@ -293,9 +295,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (softwareBtn) {
         softwareBtn.addEventListener("click", function () {
             document.getElementById("change-skills").innerHTML = `
-<h1 class="skills">SKILLS</h1> 
 <h2 class="sub-title">SOFTWARE</h2>
-
 <h2>DEVELOPMENT TOOLS</h2>
 <p class="sub-p">INFO</p>
 <p>
@@ -352,7 +352,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (coreBtn) {
         coreBtn.addEventListener("click", function () {
             document.getElementById("change-skills").innerHTML = `
-              <h1 class="skills">SKILLS</h1> 
 <h2 class="sub-title">CORE COMPUTING CONCEPTS</h2>
 
 <h2>DATA STRUCTURES & ALGORITHMS</h2>
