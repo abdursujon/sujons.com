@@ -1,20 +1,11 @@
-/* ===================================================================
-   PROJECT SECTION
-   =================================================================== */
 .custom-container {
-    /* Let the container grow with its content */
     height: auto;
-    /* Set a max-height for large desktop screens to keep it contained */
     max-height: 90vh;
-    /* Ensure it doesn't get too tall on very high screens */
     min-height: 500px;
-    /* Prevent it from becoming too squished */
     padding: 30px;
     border: 5px solid;
-    /* fallback */
     border-image: linear-gradient(320deg, #0181bd, #00ffff, rgb(81, 148, 131) 3%, rgb(36, 80, 124) 38%, rgb(131, 100, 55) 68%, rgb(65, 51, 51), #0181bd, #00ffff 98%) 1;
     border: 5px solid transparent;
-    /* Make the border transparent to show the background */
     background:
         linear-gradient(rgb(34, 34, 34), rgb(34, 34, 34)) padding-box,
         /* This is the background for the content area */
@@ -47,10 +38,6 @@
     color: transparent;
 }
 
-/* ===================================================================
-   BUTTON STYLES
-   =================================================================== */
-/* Previous/Next Project Buttons */
 .btn-outline-secondary {
     background-color: transparent;
     border: 1px solid white;
@@ -70,20 +57,17 @@
     background-color: #2c2c2d50;
 }
 
-/* Launch Project Button */
 #launch-link {
     font-family: var(--font-display);
     font-weight: bold;
     text-decoration: none;
     border-radius: 12px;
     padding: 6px 12px;
-    /* Slightly larger padding */
     transition: all 0.3s ease;
     display: inline-block;
     border: none;
     background: linear-gradient(90deg, #0181bd, #00ffff);
     color: #1a1a1a;
-    /* Dark text for contrast */
 }
 
 #launch-link:hover {
@@ -99,19 +83,16 @@
 #project-desc,
 #tech-stack {
     color: white !important;
-    /* Override Bootstrap's .text-muted class */
 }
 
 #tech-stack {
     font-weight: bold;
 }
 
-/* Make the section take full screen height */
 #project-section-1 {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    /* Apply a darker version of the animated gradient background */
     background:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         /* Dark overlay */
@@ -122,29 +103,19 @@
     padding: 50px 0px;
 }
 
-/* ===================================================================
-   IMAGE CAROUSEL
-   =================================================================== */
-/* Image container */
 .project-image-div {
     width: 100%;
-    /* Let the width dictate the size and set a max-height to prevent it from being too tall */
     max-height: 600px;
-    /* Set a max pixel height */
-    /* Set a fixed height to prevent the container from resizing */
     height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* prevent overflow if aspect ratio differs */
 }
 
-/* Image styles */
 .project-image-div img {
     height: 100%;
     width: 100%;
-    /* Use 'contain' to ensure the entire image is visible without cropping */
     object-fit: contain;
 }
 
@@ -157,11 +128,9 @@
 }
 
 .arrow-btn {
-    /* Style the button container */
     background: transparent;
     border: 1px solid white;
     border-radius: 50%;
-    /* Make it circular */
     width: 50px;
     height: 50px;
     display: flex;
@@ -173,33 +142,24 @@
 
 .arrow-btn:hover {
     background-color: #ffffff20;
-    /* Slight white glow on hover */
     transform: scale(1.1);
 }
 
 .arrow-btn svg {
-    /* Style the SVG icon itself */
     width: 24px;
     height: 24px;
     stroke: white;
-    /* Set the arrow color */
     stroke-width: 3;
-    /* Make the arrow thicker */
 }
 
-/* Remove default button styling that might interfere */
 .arrow-btn {
     background: none;
     border: none;
     cursor: pointer;
 }
 
-/* ===================================================================
-   MEDIA QUERIES
-   =================================================================== */
 @media (max-width: 767px) {
     #project-section-1 {
-        /* Allow natural document flow on mobile */
         display: block;
         padding: 20px 0;
         min-height: auto;
@@ -207,8 +167,6 @@
 
     .custom-container {
         padding: 15px;
-        /* Remove border and padding to allow image to go full-width */
-        /* On mobile, remove the animation and border styles */
         background-color: transparent;
         background-image: none;
         border: none;
@@ -216,18 +174,14 @@
 
         margin: 0 5px;
         max-height: none;
-        /* Remove height constraint on mobile */
-        /* Remove height constraint */
     }
 
     .project-image-div {
-        /* Reduce image height significantly on mobile */
         height: 40vh;
         margin-bottom: 20px;
     }
 
     .project-image-div img {
-        /* Ensure the image doesn't get cut off on mobile */
         object-fit: contain;
     }
 
@@ -235,18 +189,7 @@
         font-size: 1.5rem;
     }
 
-    /* Align project navigation buttons to the left on small screens */
     .col-md-6>.text-end {
         text-align: left !important;
     }
-}
-
-/* ===================================================================
-   FOOTER STICKY (PROJECTS PAGE)
-   =================================================================== */
-#footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100vw;
 }

@@ -1,10 +1,3 @@
-/**
- * main.js
- *
- * This script handles global functionality for the website, including:
- * - Loading reusable header and footer components.
- * - Initializing interactive elements like the navigation and skills section.
- */
 document.addEventListener("DOMContentLoaded", function () {
     const loadComponent = (url, placeholderId) => {
         fetch(url)
@@ -17,38 +10,31 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (placeholder) {
                     placeholder.innerHTML = data;
                 }
-                // After the header is loaded, initialize its interactive elements.
                 if (placeholderId === 'header-placeholder') {
                     initializeNavbar();
                 }
             })
             .catch(error => console.error('Error loading component:', error));
     };
-
-    // ===================================================================
-    // COMPONENT LOADING
-    // ===================================================================
-    // Load header and footer into their placeholders
     loadComponent('components/header.html', 'header-placeholder');
     loadComponent('components/footer.html', 'footer-placeholder');
 
     function initializeNavbar() {
         const menuButton = document.querySelector(".custom-navbar-toggler");
-        if (!menuButton) return; // Exit if the button isn't found
-        const menuIcon = menuButton.querySelector("img.menu-icon");
+        if (!menuButton) return;
+        const menuIcon = menuButton.querySelector("svg.menu-icon");
+        if (!menuIcon) return;
+        const menuIconContent = `<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>`;
+        const xIconContent = `<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>`;
+
+        let isMenuOpen = false;
+
         menuButton.addEventListener("click", function () {
-            if (menuIcon.src.includes("hamburger-menu.png")) {
-                menuIcon.src = "./assets/home/icon/close-window.png";
-            } else {
-                menuIcon.src = "./assets/home/icon/hamburger-menu.png";
-            }
+            isMenuOpen = !isMenuOpen;
+            menuIcon.innerHTML = isMenuOpen ? xIconContent : menuIconContent;
         });
     }
 
-    // ===================================================================
-    // GREETING LOGIC (HOME PAGE)
-    // ===================================================================
-    // Displays a time-appropriate greeting.
     function greetTheVisitor() {
         let greeting;
         let hour = new Date().getHours();
@@ -68,9 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
         greetingElement.innerHTML = "Hi there, " + greetTheVisitor();
     }
 
-    // ===================================================================
-    // SKILLS SECTION (HOME PAGE)
-    // ===================================================================
     const languagesBtn = document.getElementById("languages");
     if (languagesBtn) {
         languagesBtn.addEventListener("click", function () {
@@ -87,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 and Design Patterns. Currently leading an Agile group project while working on multiple desktop applications.
                 </p>
                 <p class="project-ex">
-                <strong>Projects:</strong> Sputnik Vehicle Hire, DimDamGo
+                <strong>Project Example:</strong> <a href="https://emilias-della-roma.netlify.app/" target="_blank">Emilia's Della Roma</a>
                 </p>
                 <hr>
 
@@ -99,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 to take applications from concept to completion with a user-first approach.
                 </p>
                 <p class="project-ex">
-                <strong>Projects:</strong> Portfolio Website, Webronics, Emilia's Della Roma, TinCat
+                <strong>Tech Stack:</strong> Portfolio Website, Webronics, Emilia's Della Roma, TinCat
                 </p>
                 <hr>
 
@@ -431,4 +414,4 @@ document.addEventListener("DOMContentLoaded", function () {
 `;
         });
     }
-}); // End of DOMContentLoaded
+});

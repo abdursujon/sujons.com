@@ -1,13 +1,3 @@
-/**
- * project.js
- *
- * This script manages the interactive project carousel on the projects page.
- * It handles project data, state, rendering, and user interactions.
- */
-
-// ===================================================================
-// DATA
-// ===================================================================
 const projects = [
     {
         title: "Emilia's Della Roma",
@@ -71,25 +61,16 @@ const projects = [
     }
 ];
 
-// ===================================================================
-// STATE
-// ===================================================================
 let currentProject = 0;
 let currentImage = 0;
 
-// ===================================================================
-// DOM ELEMENTS
-// ===================================================================
 const imageEl = document.getElementById("carousel-image");
 const dotsEl = document.getElementById("carousel-dots");
 const titleEl = document.getElementById("project-title");
 const descEl = document.getElementById("project-desc");
 const techSt = document.getElementById("tech-stack");
 const linkEl = document.getElementById("launch-link");
-// ===================================================================
-// RENDERING FUNCTIONS
-// ===================================================================
-/** Renders the full details of the current project. */
+
 function renderProject() {
     const project = projects[currentProject];
     currentImage = 0;
@@ -101,13 +82,11 @@ function renderProject() {
     renderDots();
 }
 
-/** Renders the current image for the selected project. */
 function renderImage() {
     imageEl.src = projects[currentProject].images[currentImage];
     updateDots();
 }
 
-/** Creates the navigation dots for the image carousel. */
 function renderDots() {
     dotsEl.innerHTML = "";
     projects[currentProject].images.forEach((_, idx) => {
@@ -122,7 +101,6 @@ function renderDots() {
     updateDots();
 }
 
-/** Updates the active state of the navigation dots. */
 function updateDots() {
     const dots = dotsEl.querySelectorAll(".dot");
     dots.forEach((dot, idx) => {
@@ -130,36 +108,26 @@ function updateDots() {
     });
 }
 
-// ===================================================================
-// EVENT HANDLERS (Called from onclick attributes in HTML)
-// ===================================================================
-/** Moves to the next image in the carousel. */
 function nextImage() {
     const images = projects[currentProject].images;
     currentImage = (currentImage + 1) % images.length;
     renderImage();
 }
 
-/** Moves to the previous image in the carousel. */
 function prevImage() {
     const images = projects[currentProject].images;
     currentImage = (currentImage - 1 + images.length) % images.length;
     renderImage();
 }
 
-/** Moves to the next project in the projects array. */
 function nextProject() {
     currentProject = (currentProject + 1) % projects.length;
     renderProject();
 }
 
-/** Moves to the previous project in the projects array. */
 function prevProject() {
     currentProject = (currentProject - 1 + projects.length) % projects.length;
     renderProject();
 }
 
-// ===================================================================
-// INITIALIZATION
-// ===================================================================
 renderProject();

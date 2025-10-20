@@ -16,10 +16,11 @@ html,
 body {
     font-size: 1em;
     font-family: var(--font-primary);
+    color: #1D1D1F;
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 48px;
 }
 
 p {
@@ -30,13 +31,20 @@ p {
 /* ===================================================================
    NAVIGATION
    =================================================================== */
+.custom-navbar-toggler .menu-icon {
+    height: 30px;
+    /* Adjust size as needed */
+    width: 30px;
+    stroke: #cccccc;
+    /* Use 'stroke' for line-based SVGs */
+}
+
 .split-text-container {
     display: flex;
-    font-size: 2rem;
+    font-size: 20px;
     font-weight: bold;
     font-family: var(--font-logo);
     text-transform: none;
-    color: #0181bd;
     overflow: hidden;
 }
 
@@ -52,21 +60,14 @@ p {
 .text-part.left {
     transform: translateX(-200%);
     animation-name: slide-in-left;
-    background: linear-gradient(90deg, #0181bd, #00ffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+    color: #cccccc;
+    margin-right: 6px;
 }
 
 .text-part.right {
     transform: translateX(200%);
     animation-name: slide-in-right;
-    background: linear-gradient(90deg, #0181bd, #00ffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+    color: #cccccc;
 }
 
 @keyframes slide-in-left {
@@ -90,7 +91,7 @@ p {
 }
 
 .custom-navbar {
-    background-color: rgb(32, 28, 28) !important;
+    background-color: #161617 !important;
 }
 
 .navbar-toggler {
@@ -102,31 +103,24 @@ p {
     outline: none;
 }
 
-.custom-navbar-toggler img {
-    width: 40px;
-    height: 40px;
-}
-
 .navbar-nav .nav-link {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     margin: 5px;
-    background: linear-gradient(90deg, #0181bd, #00ffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+    color: #cccccc;
 }
 
 .navbar-nav .nav-link:hover {
-    -webkit-text-fill-color: #00ffff;
     text-decoration: underline;
+    text-decoration-color: #cccccc;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
 }
 
 .contact-link img {
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     margin-top: -5px;
 }
 
@@ -142,9 +136,9 @@ p {
 #section-1 {
     height: 100%;
     overflow: auto;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
         /* Dark overlay */
-        linear-gradient(320deg, rgb(81, 148, 131) 3%, rgb(36, 80, 124) 38%, rgb(131, 100, 55) 68%, rgb(65, 51, 51) 98%);
+        linear-gradient(320deg, rgb(41, 74, 66) 3%, rgb(18, 40, 62) 38%, rgb(66, 50, 28) 68%, rgb(33, 26, 26) 98%);
     animation: gradient 18s ease infinite;
     background-size: 180% 180%;
     padding: 50px 0px;
@@ -162,7 +156,7 @@ figure {
 .effect {
     display: block;
     width: 100%;
-    font: 900 2em var(--font-effect);
+    font: 900 40px var(--font-effect);
     text-transform: uppercase;
     position: absolute;
     color: #0a0a0a;
@@ -289,7 +283,8 @@ hr {
 .introduction>h1 {
     margin-top: 20px;
     color: rgb(240, 142, 15);
-    font-size: 2rem;
+    font-size: 32px;
+    /* A slightly smaller size for this secondary title */
     text-align: center;
 }
 
@@ -357,67 +352,10 @@ hr {
     font-family: var(--font-display);
 }
 
-button a {
-    color: white;
-    text-decoration: none;
-}
-
 .pointer:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px #646cff50;
     background-color: #2c2c2d50;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1.05);
-    }
-
-    50% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1.05);
-    }
-}
-
-@keyframes shake {
-
-    0%,
-    100% {
-        transform: translateX(0) scale(1.05);
-    }
-
-    25% {
-        transform: translateX(-5px) scale(1.05);
-    }
-
-    75% {
-        transform: translateX(5px) scale(1.05);
-    }
-}
-
-@keyframes moveAround {
-    0% {
-        transform: translate(0, 0) scale(1.05);
-    }
-
-    25% {
-        transform: translate(5px, -5px) scale(1.05);
-    }
-
-    50% {
-        transform: translate(0, 0) scale(1.05);
-    }
-
-    75% {
-        transform: translate(-5px, 5px) scale(1.05);
-    }
-
-    100% {
-        transform: translate(0, 0) scale(1.05);
-    }
 }
 
 /* ===================================================================
@@ -479,15 +417,6 @@ button a {
     -webkit-transform: rotateX(90deg) translateZ(-160px);
     transform: rotateX(90deg) translateZ(-160px);
     z-index: 1;
-}
-
-.ball.plain {
-    background: black;
-}
-
-.ball.plain:before,
-.ball.plain:after {
-    display: none;
 }
 
 .ball.bubble {
@@ -701,6 +630,8 @@ button a {
     background-clip: background;
     transition: .4s;
     width: fit-content;
+    min-width: 120px;
+    /* Add a minimum width to prevent resizing on hover */
     padding: 5px 15px;
 }
 
@@ -731,8 +662,8 @@ h2 {
 }
 
 .footer-icon img {
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
 }
 
 .rights {
@@ -743,20 +674,58 @@ h2 {
 /* ===================================================================
    MEDIA QUERIES
    =================================================================== */
+/* Re-order hero elements on mobile */
+.cs {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 /* Hide hr on small devices */
 @media (max-width: 767px) {
     .effect {
+        /* Base styles for the mobile heading */
+        text-align: center;
+        position: relative;
         color: white;
+        text-shadow: none;
+        animation: none;
+        transform: none !important;
+    }
+
+    .effect:first-child {
+        /* Hide the original text content by making its font size 0 */
+        font-size: 0;
+    }
+
+    .effect:first-child::before {
+        content: "Abdur Sujon";
+        font-size: 20px;
+        /* Restore a larger font size for the name */
+    }
+
+    /* Hide the extra layers of the 3D text on mobile for a cleaner look */
+    .effect:not(:first-child) {
+        display: none;
     }
 
     hr {
         display: none;
     }
 
+    /* Remove default figure margin and reduce image margin on mobile */
+    figure {
+        margin-bottom: 0;
+    }
+
+    .profile img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
     .introduction .title-main,
     .introduction .title-sub {
         display: block;
-        font-size: 1.6rem;
+        font-size: 20px;
         color: white;
     }
 
@@ -764,11 +733,52 @@ h2 {
         display: none;
     }
 
+    /* Remove top margin from the introduction heading on mobile for consistent spacing */
+    .introduction>h1 {
+        margin-top: 0;
+    }
+
+    /* Left-align skills text on small devices for better readability */
+    #change-skills {
+        text-align: left;
+    }
+
+    /* Adjust About/Projects buttons for mobile */
+    .introduction_btn_group {
+        justify-content: flex-start !important;
+        /* Override Bootstrap's center alignment */
+        margin-top: 20px;
+    }
+
+    .introduction_btn_group .pointer {
+        height: 40px;
+        /* Reduce button height */
+        font-size: 16px;
+    }
+
+    /* Adjust skills buttons for mobile */
+    .skills-btn-group {
+        text-align: left !important;
+        /* Override text-center */
+        padding-left: 15px;
+        /* Add some padding to align with other content */
+    }
+
+    .skills-btn-group .btn-secondary {
+        font-size: 14px;
+        /* Slightly smaller font for these buttons */
+        padding: 4px 12px;
+    }
 }
 
 
 /* Medium devices  */
 @media (min-width:768px) {
+
+    /* Restore default column order for larger screens */
+    .cs {
+        flex-direction: row;
+    }
 
     /* Section 1 */
     .profile img {
@@ -783,7 +793,7 @@ h2 {
     }
 
     .effect {
-        font-size: 3.5em;
+        font-size: 48px;
         margin-top: -50px;
         animation: glow 10s ease-in-out infinite;
     }
@@ -810,7 +820,7 @@ h2 {
     }
 
     .effect {
-        font-size: 4em;
+        font-size: 48px;
         margin-top: -50px;
     }
 
@@ -837,7 +847,7 @@ h2 {
     }
 
     .effect {
-        font-size: 4em;
+        font-size: 48px;
         margin-top: -50px;
     }
 
@@ -860,7 +870,7 @@ h2 {
     }
 
     .effect {
-        font-size: 5em;
+        font-size: 48px;
         margin-top: -50px;
     }
 
