@@ -1,78 +1,77 @@
+/* ===================================================================
+   PROJECTS CONTAINER (Apple-Style Card)
+   =================================================================== */
 .custom-container {
     height: auto;
     max-height: 90vh;
     min-height: 500px;
-    padding: 30px;
-    border: 5px solid;
-    border-image: linear-gradient(320deg, #0181bd, #00ffff, rgb(81, 148, 131) 3%, rgb(36, 80, 124) 38%, rgb(131, 100, 55) 68%, rgb(65, 51, 51), #0181bd, #00ffff 98%) 1;
-    border: 5px solid transparent;
-    background:
-        linear-gradient(rgb(34, 34, 34), rgb(34, 34, 34)) padding-box,
-        /* This is the background for the content area */
-        linear-gradient(120deg, #0181bd, #00ffff, #ff7f50, #ff00ff, #0181bd) border-box;
-    /* This is the gradient for the border */
-    background-size: 200% 200%;
-    animation: gradient-animation 5s ease-in-out infinite;
+    padding: 20px; /* Increased padding */
+    
+    /* New Apple-Style Card Look */
+    background-color: rgba(255, 255, 255, 0.05); /* Frosted Glass Effect */
+    border-radius: 20px; /* Generous Radius */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle 1px light border */
+    box-shadow: var(--shadow-lift); /* Floating effect */
+    
+    /* Remove gradient border and animation */
+    border-image: none;
+    background-size: auto;
+    animation: none;
 }
 
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
 
 #project-title {
     font-weight: bold;
-    background: linear-gradient(90deg, #0181bd, #00ffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+    /* Use solid text color with accent highlight */
+    color: var(--color-accent); 
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: var(--color-accent);
+    background-clip: unset;
+    text-shadow: none;
 }
 
+/* Secondary Button (Previous/Next) */
 .btn-outline-secondary {
     background-color: transparent;
-    border: 1px solid white;
-    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--color-text-dark);
     font-family: var(--font-display);
-    font-weight: bold;
+    font-weight: 500;
     text-decoration: none;
-    border-radius: 12px;
-    padding: 5px 10px;
-    transition: all 0.3s ease;
+    border-radius: var(--radius-button);
+    padding: 5px 12px;
+    transition: all 0.2s ease;
     display: inline-block;
 }
 
 .btn-outline-secondary:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #646cff50;
-    background-color: #2c2c2d50;
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 0 10px rgba(0, 122, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-accent);
 }
 
+/* Primary Button (Launch Link) */
 #launch-link {
     font-family: var(--font-display);
     font-weight: bold;
     text-decoration: none;
-    border-radius: 12px;
-    padding: 6px 12px;
-    transition: all 0.3s ease;
+    border-radius: var(--radius-button);
+    padding: 10px 20px;
+    transition: all 0.2s ease;
     display: inline-block;
     border: none;
-    background: linear-gradient(90deg, #0181bd, #00ffff);
-    color: #1a1a1a;
+    
+    /* Solid Accent Color */
+    background: var(--color-accent); 
+    color: white; /* White text on blue accent */
+    box-shadow: var(--shadow-subtle);
 }
 
 #launch-link:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #00ffff80;
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(0, 122, 255, 0.6);
 }
 
 .text-end {
@@ -82,25 +81,22 @@
 
 #project-desc,
 #tech-stack {
-    color: white !important;
+    color: var(--color-text-dark) !important;
 }
 
 #tech-stack {
     font-weight: bold;
 }
 
+/* Project Section Background */
 #project-section-1 {
-    min-height: 100vh;
     display: flex;
     align-items: center;
-    background:
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        /* Dark overlay */
-        linear-gradient(320deg, rgb(81, 148, 131) 3%, rgb(36, 80, 124) 38%, rgb(131, 100, 55) 68%, rgb(65, 51, 51) 98%);
-    /* Original gradient */
-    animation: gradient 18s ease infinite;
-    background-size: 180% 180%;
-    padding: 50px 0px;
+    /* Use the global dark background */
+    background: var(--color-background-dark); 
+    animation: none; /* Remove gradient animation */
+    background-size: auto;
+    padding: 80px 0px; /* Increased vertical padding */
 }
 
 .project-image-div {
@@ -117,6 +113,8 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
+    border-radius: var(--radius-default); /* Apply radius to image */
+    box-shadow: var(--shadow-subtle); /* Subtle shadow on image */
 }
 
 .control-div {
@@ -127,9 +125,10 @@
     margin: 20px auto 0;
 }
 
+/* Arrow Buttons */
 .arrow-btn {
-    background: transparent;
-    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.05);
+    border: var(--border-subtle);
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -137,43 +136,47 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .arrow-btn:hover {
-    background-color: #ffffff20;
-    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+    border-color: var(--color-accent);
 }
 
 .arrow-btn svg {
     width: 24px;
     height: 24px;
-    stroke: white;
-    stroke-width: 3;
+    stroke: var(--color-text-dark);
+    stroke-width: 2; /* Thinner stroke for modern look */
 }
 
-.arrow-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
+/* (Keep existing .arrow-btn { background: none; border: none; cursor: pointer; } ) */
+#project-section-1 {
+  display: flex;
+  justify-content: center; /* horizontal centering */
 }
 
+/* ===================================================================
+   MEDIA QUERIES
+   =================================================================== */
 @media (max-width: 767px) {
     #project-section-1 {
         display: block;
-        padding: 20px 0;
+        padding: 40px 0;
         min-height: auto;
     }
 
     .custom-container {
-        padding: 15px;
-        background-color: transparent;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.05);
         background-image: none;
-        border: none;
+        border: var(--border-subtle); /* Keep the subtle border on mobile */
         border-image: none;
-
         margin: 0 5px;
         max-height: none;
+        box-shadow: none; /* Remove heavy shadow on mobile */
     }
 
     .project-image-div {
@@ -190,6 +193,8 @@
     }
 
     .col-md-6>.text-end {
-        text-align: left !important;
+        /* Mobile: stack buttons vertically if needed, or keep row with justified space */
+        justify-content: space-between;
+        margin-top: 15px;
     }
 }
