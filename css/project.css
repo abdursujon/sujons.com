@@ -2,154 +2,153 @@
    PROJECTS CONTAINER (Apple-Style Card)
    =================================================================== */
 .custom-container {
-    height: auto;
-    max-height: 90vh;
-    min-height: 500px;
-    padding: 20px; /* Increased padding */
-    
-    /* New Apple-Style Card Look */
-    background-color: rgba(255, 255, 255, 0.05); /* Frosted Glass Effect */
-    border-radius: 20px; /* Generous Radius */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle 1px light border */
-    box-shadow: var(--shadow-lift); /* Floating effect */
-    
-    /* Remove gradient border and animation */
-    border-image: none;
-    background-size: auto;
-    animation: none;
+  height: auto;
+  max-height: 90vh;
+  min-height: 500px;
+  padding: 20px; /* Increased padding */
+
+  /* New Apple-Style Card Look */
+  background-color: rgba(255, 255, 255, 0.05); /* Frosted Glass Effect */
+  border-radius: 20px; /* Generous Radius */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle 1px light border */
+  box-shadow: var(--shadow-lift); /* Floating effect */
+
+  /* Remove gradient border and animation */
+  border-image: none;
+  background-size: auto;
+  animation: none;
 }
 
-
 #project-title {
-    font-weight: bold;
-    /* Use solid text color with accent highlight */
-    color: var(--color-accent); 
-    background: none;
-    -webkit-background-clip: unset;
-    -webkit-text-fill-color: var(--color-accent);
-    background-clip: unset;
-    text-shadow: none;
+  font-weight: bold;
+  /* Use solid text color with accent highlight */
+  color: var(--color-accent);
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: var(--color-accent);
+  background-clip: unset;
+  text-shadow: none;
 }
 
 /* Secondary Button (Previous/Next) */
 .btn-outline-secondary {
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: var(--color-text-dark);
-    font-family: var(--font-display);
-    font-weight: 500;
-    text-decoration: none;
-    border-radius: var(--radius-button);
-    padding: 5px 12px;
-    transition: all 0.2s ease;
-    display: inline-block;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--color-text-dark);
+  font-family: var(--font-display);
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: var(--radius-button);
+  padding: 5px 12px;
+  transition: all 0.2s ease;
+  display: inline-block;
 }
 
 .btn-outline-secondary:hover {
-    transform: translateY(-2px); /* Slight lift */
-    box-shadow: 0 0 10px rgba(0, 122, 255, 0.2);
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: var(--color-accent);
+  transform: translateY(-2px); /* Slight lift */
+  box-shadow: 0 0 10px rgba(0, 122, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-accent);
 }
 
 /* Primary Button (Launch Link) */
 #launch-link {
-    font-family: var(--font-display);
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: var(--radius-button);
-    padding: 10px 20px;
-    transition: all 0.2s ease;
-    display: inline-block;
-    border: none;
-    
-    /* Solid Accent Color */
-    background: var(--color-accent); 
-    color: white; /* White text on blue accent */
-    box-shadow: var(--shadow-subtle);
+  font-family: var(--font-display);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: var(--radius-button);
+  padding: 10px 20px;
+  transition: all 0.2s ease;
+  display: inline-block;
+  border: none;
+
+  /* Solid Accent Color */
+  background: var(--color-accent);
+  color: white; /* White text on blue accent */
+  box-shadow: var(--shadow-subtle);
 }
 
 #launch-link:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 25px rgba(0, 122, 255, 0.6);
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(0, 122, 255, 0.6);
 }
 
 .text-end {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 #project-desc,
 #tech-stack {
-    color: var(--color-text-dark) !important;
+  color: var(--color-text-dark) !important;
 }
 
 #tech-stack {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* Project Section Background */
 #project-section-1 {
-    display: flex;
-    align-items: center;
-    /* Use the global dark background */
-    background: var(--color-background-dark); 
-    animation: none; /* Remove gradient animation */
-    background-size: auto;
-    padding: 80px 0px; /* Increased vertical padding */
+  display: flex;
+  align-items: center;
+  /* Use the global dark background */
+  background: var(--color-background-dark);
+  animation: none; /* Remove gradient animation */
+  background-size: auto;
+  padding: 80px 0px; /* Increased vertical padding */
 }
 
 .project-image-div {
-    width: 100%;
-    max-height: 600px;
-    height: 450px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  width: 100%;
+  max-height: 600px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .project-image-div img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    border-radius: var(--radius-default); /* Apply radius to image */
-    box-shadow: var(--shadow-subtle); /* Subtle shadow on image */
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-default); /* Apply radius to image */
+  box-shadow: var(--shadow-subtle); /* Subtle shadow on image */
 }
 
 .control-div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: 20px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 20px auto 0;
 }
 
 /* Arrow Buttons */
 .arrow-btn {
-    background: rgba(255, 255, 255, 0.05);
-    border: var(--border-subtle);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border: var(--border-subtle);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .arrow-btn:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    transform: scale(1.05);
-    border-color: var(--color-accent);
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+  border-color: var(--color-accent);
 }
 
 .arrow-btn svg {
-    width: 24px;
-    height: 24px;
-    stroke: var(--color-text-dark);
-    stroke-width: 2; /* Thinner stroke for modern look */
+  width: 24px;
+  height: 24px;
+  stroke: var(--color-text-dark);
+  stroke-width: 2; /* Thinner stroke for modern look */
 }
 
 /* (Keep existing .arrow-btn { background: none; border: none; cursor: pointer; } ) */
@@ -162,39 +161,39 @@
    MEDIA QUERIES
    =================================================================== */
 @media (max-width: 767px) {
-    #project-section-1 {
-        display: block;
-        padding: 40px 0;
-        min-height: auto;
-    }
+  #project-section-1 {
+    display: block;
+    padding: 40px 0;
+    min-height: auto;
+  }
 
-    .custom-container {
-        padding: 20px;
-        background-color: rgba(255, 255, 255, 0.05);
-        background-image: none;
-        border: var(--border-subtle); /* Keep the subtle border on mobile */
-        border-image: none;
-        margin: 0 5px;
-        max-height: none;
-        box-shadow: none; /* Remove heavy shadow on mobile */
-    }
+  .custom-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    background-image: none;
+    border: var(--border-subtle); /* Keep the subtle border on mobile */
+    border-image: none;
+    margin: 0 5px;
+    max-height: none;
+    box-shadow: none; /* Remove heavy shadow on mobile */
+  }
 
-    .project-image-div {
-        height: 40vh;
-        margin-bottom: 20px;
-    }
+  .project-image-div {
+    height: 40vh;
+    margin-bottom: 20px;
+  }
 
-    .project-image-div img {
-        object-fit: contain;
-    }
+  .project-image-div img {
+    object-fit: contain;
+  }
 
-    #project-title {
-        font-size: 1.5rem;
-    }
+  #project-title {
+    font-size: 1.5rem;
+  }
 
-    .col-md-6>.text-end {
-        /* Mobile: stack buttons vertically if needed, or keep row with justified space */
-        justify-content: space-between;
-        margin-top: 15px;
-    }
+  .col-md-6 > .text-end {
+    /* Mobile: stack buttons vertically if needed, or keep row with justified space */
+    justify-content: space-between;
+    margin-top: 15px;
+  }
 }

@@ -1,63 +1,61 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const loadComponent = (url, placeholderId) => {
-        fetch(url)
-            .then(response => {
-                if (!response.ok) throw new Error(`Failed to load ${url}`);
-                return response.text();
-            })
-            .then(data => {
-                const placeholder = document.getElementById(placeholderId);
-                if (placeholder) {
-                    placeholder.innerHTML = data;
-                }
-                if (placeholderId === 'header-placeholder') {
-                    initializeNavbar();
-                }
-            })
-            .catch(error => console.error('Error loading component:', error));
-    };
-    loadComponent('components/header.html', 'header-placeholder');
-    loadComponent('components/footer.html', 'footer-placeholder');
-
-    function initializeNavbar() {
-        const menuButton = document.querySelector(".custom-navbar-toggler");
-        if (!menuButton) return;
-        const menuIcon = menuButton.querySelector("svg.menu-icon");
-        if (!menuIcon) return;
-        const menuIconContent = `<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>`;
-        const xIconContent = `<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>`;
-
-        let isMenuOpen = false;
-
-        menuButton.addEventListener("click", function () {
-            isMenuOpen = !isMenuOpen;
-            menuIcon.innerHTML = isMenuOpen ? xIconContent : menuIconContent;
-        });
-    }
-
-    function greetTheVisitor() {
-        let greeting;
-        let hour = new Date().getHours();
-        if (hour >= 0 && hour < 12) {
-            greeting = "Good Morning";
+  const loadComponent = (url, placeholderId) => {
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) throw new Error(`Failed to load ${url}`);
+        return response.text();
+      })
+      .then((data) => {
+        const placeholder = document.getElementById(placeholderId);
+        if (placeholder) {
+          placeholder.innerHTML = data;
         }
-        else if (hour >= 12 && hour < 18) {
-            greeting = "Good Afternoon"
+        if (placeholderId === "header-placeholder") {
+          initializeNavbar();
         }
-        else {
-            greeting = "Good Evening";
-        }
-        return greeting;
-    }
-    const greetingElement = document.getElementById("greeting");
-    if (greetingElement) {
-        greetingElement.innerHTML = "Hi there, " + greetTheVisitor();
-    }
+      })
+      .catch((error) => console.error("Error loading component:", error));
+  };
+  loadComponent("components/header.html", "header-placeholder");
+  loadComponent("components/footer.html", "footer-placeholder");
 
-    const languagesBtn = document.getElementById("languages");
-    if (languagesBtn) {
-        languagesBtn.addEventListener("click", function () {
-            document.getElementById("change-skills").innerHTML = `
+  function initializeNavbar() {
+    const menuButton = document.querySelector(".custom-navbar-toggler");
+    if (!menuButton) return;
+    const menuIcon = menuButton.querySelector("svg.menu-icon");
+    if (!menuIcon) return;
+    const menuIconContent = `<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>`;
+    const xIconContent = `<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>`;
+
+    let isMenuOpen = false;
+
+    menuButton.addEventListener("click", function () {
+      isMenuOpen = !isMenuOpen;
+      menuIcon.innerHTML = isMenuOpen ? xIconContent : menuIconContent;
+    });
+  }
+
+  function greetTheVisitor() {
+    let greeting;
+    let hour = new Date().getHours();
+    if (hour >= 0 && hour < 12) {
+      greeting = "Good Morning";
+    } else if (hour >= 12 && hour < 18) {
+      greeting = "Good Afternoon";
+    } else {
+      greeting = "Good Evening";
+    }
+    return greeting;
+  }
+  const greetingElement = document.getElementById("greeting");
+  if (greetingElement) {
+    greetingElement.innerHTML = "Hi there, " + greetTheVisitor();
+  }
+
+  const languagesBtn = document.getElementById("languages");
+  if (languagesBtn) {
+    languagesBtn.addEventListener("click", function () {
+      document.getElementById("change-skills").innerHTML = `
                 
                 <h2 class="sub-titile">CORE PROGRAMMING</h2>
 
@@ -110,13 +108,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 </p>
 
 `;
-        });
-    }
+    });
+  }
 
-    const databaseBtn = document.getElementById("database");
-    if (databaseBtn) {
-        databaseBtn.addEventListener("click", function () {
-            document.getElementById("change-skills").innerHTML = `
+  const databaseBtn = document.getElementById("database");
+  if (databaseBtn) {
+    databaseBtn.addEventListener("click", function () {
+      document.getElementById("change-skills").innerHTML = `
                 <h2 class="sub-titile">DATABASE</h2>
 
                 <h2>SQL & MySQL</h2>
@@ -133,13 +131,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 </p>
 
 `;
-        });
-    }
+    });
+  }
 
-    const webdevBtn = document.getElementById("webdev");
-    if (webdevBtn) {
-        webdevBtn.addEventListener("click", function () {
-            document.getElementById("change-skills").innerHTML = `
+  const webdevBtn = document.getElementById("webdev");
+  if (webdevBtn) {
+    webdevBtn.addEventListener("click", function () {
+      document.getElementById("change-skills").innerHTML = `
             
                 <h2 class="sub-titile">WEB DEVELOPMENT</h2>
 
@@ -185,13 +183,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 </p>
 
 `;
-        });
-    }
+    });
+  }
 
-    const desktopAppBtn = document.getElementById("desktop-app");
-    if (desktopAppBtn) {
-        desktopAppBtn.addEventListener("click", function () {
-            document.getElementById("change-skills").innerHTML = `
+  const desktopAppBtn = document.getElementById("desktop-app");
+  if (desktopAppBtn) {
+    desktopAppBtn.addEventListener("click", function () {
+      document.getElementById("change-skills").innerHTML = `
              
               <h2 class="sub-title">DESKTOP APPLICATION DEVELOPMENT</h2>
               <h2>C# & .NET</h2>
@@ -214,13 +212,13 @@ document.addEventListener("DOMContentLoaded", function () {
                   project management, sprint planning, and team collaboration, while emphasizing the importance of clear
                   communication and iterative development. </p>
 `;
-        });
-    }
+    });
+  }
 
-    const backendBtn = document.getElementById("back-end");
-    if (backendBtn) {
-        backendBtn.addEventListener("click", function () {
-            document.getElementById("change-skills").innerHTML = `
+  const backendBtn = document.getElementById("back-end");
+  if (backendBtn) {
+    backendBtn.addEventListener("click", function () {
+      document.getElementById("change-skills").innerHTML = `
               
                <h2 class="sub-titile">BACKEND DEVELOPMENT</h2>
 
@@ -288,13 +286,13 @@ document.addEventListener("DOMContentLoaded", function () {
               </p>
 
 `;
-        });
-    }
+    });
+  }
 
-    const softwareBtn = document.getElementById("software");
-    if (softwareBtn) {
-        softwareBtn.addEventListener("click", function () {
-            document.getElementById("change-skills").innerHTML = `
+  const softwareBtn = document.getElementById("software");
+  if (softwareBtn) {
+    softwareBtn.addEventListener("click", function () {
+      document.getElementById("change-skills").innerHTML = `
 <h2 class="sub-title">SOFTWARE</h2>
 <h2>DEVELOPMENT TOOLS</h2>
 <p class="sub-p">INFO</p>
@@ -345,13 +343,13 @@ document.addEventListener("DOMContentLoaded", function () {
               </p>
 
 `;
-        });
-    }
+    });
+  }
 
-    const coreBtn = document.getElementById("core");
-    if (coreBtn) {
-        coreBtn.addEventListener("click", function () {
-            document.getElementById("change-skills").innerHTML = `
+  const coreBtn = document.getElementById("core");
+  if (coreBtn) {
+    coreBtn.addEventListener("click", function () {
+      document.getElementById("change-skills").innerHTML = `
 <h2 class="sub-title">CORE COMPUTING CONCEPTS</h2>
 
 <h2>DATA STRUCTURES & ALGORITHMS</h2>
@@ -411,6 +409,6 @@ document.addEventListener("DOMContentLoaded", function () {
 <hr>
 
 `;
-        });
-    }
+    });
+  }
 });

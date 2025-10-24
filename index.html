@@ -1,157 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>sujon</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>sujons.com</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <link href="css/fonts.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-</head>
-
-<body>
+  <body>
     <header id="header-placeholder"></header>
 
     <main>
-        <section id="section-1">
-            <div class="container custom-container-hero">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-lg-10">
-                        
-                        <div class="row cs">
-                            
-                            <div class="profile col-12 custom-col d-flex flex-column justify-content-center align-items-center">
-                                <img src="assets/home/profile-1.png" alt="profile">
-                                
-                                <h1 class="simple-title">Abdur Sujon</h1>
-                            </div>
-
-                        </div>
-                        
-                        <div class="row introduction justify-content-center">
-                            <div class="col-12 text-center">
-                                <h1>
-                                    <span class="h4">BSc Computer Science Candidate | Software Engineer</span>
-                                </h1>
-                                <p id="greeting"></p>
-                            </div>
-                            <div class="col-12 text-start">
-                                <p>
-                                    This is Sujon, a Computer Science student at the University of Salford and a full-stack software developer. My journey began in 2022 when I first started exploring web development through self-learning. I quickly discovered how much I enjoy creating solutions through code.
-                                </p>
-                                <p>
-                                    I enrolled at the University of Salford to deepen my knowledge and gain a strong academic foundation. My decision was driven by genuine interest, as I believe a career choice should be meaningful. I have worked on multiple hobby projects individually and am currently gaining hands-on experience as a team leader of Salford Hack Camp, utilizing Agile development practices to deliver a software solution for an actual client.
-                                </p>
-                                <p>
-                                    Thanks for stopping by, it truly means a lot! If you're interested in my work or just want to connect, feel free to drop me an email. I'd love to hear from you!
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="row introduction_btn_group d-flex justify-content-center align-items-center">
-                            <button class="cursor-box pointer" onclick="location.href='about.html'">ABOUT</button>
-                            <button class="cursor-box pointer" onclick="location.href='projects.html'">PROJECTS</button>
-                        </div>
-                    </div>
+      <section id="section-1">
+        <div class="container custom-container-hero">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+              <div class="row cs">
+                <div class="profile col-12 custom-col d-flex flex-column justify-content-center align-items-center">
+                  <img src="assets/home/profile-1.png" alt="profile" />
+                  <h1 class="simple-title">Abdur Sujon</h1>
                 </div>
+              </div>
+
+              <div class="row introduction justify-content-center">
+                <div class="col-12 text-center">
+                  <h1>
+                    <span class="h4">BSc Computer Science Candidate | Software Engineer</span>
+                  </h1>
+                  <p id="greeting"></p>
+                </div>
+                <div class="col-12 text-start">
+                  <p>
+                    This is Sujon, a Computer Science student at the University of Salford and a full-stack software
+                    developer. My journey began in 2022 when I first started exploring web development through
+                    self-learning. I quickly discovered how much I enjoy creating solutions through code.
+                  </p>
+                  <p>
+                    I enrolled at the University of Salford to deepen my knowledge and gain a strong academic
+                    foundation. My decision was driven by genuine interest, as I believe a career choice should be
+                    meaningful. I have worked on multiple hobby projects individually and am currently gaining hands-on
+                    experience as a team leader of Salford Hack Camp, utilizing Agile development practices to deliver a
+                    software solution for an actual client.
+                  </p>
+                  <p>
+                    Thanks for stopping by, it truly means a lot! If you're interested in my work or just want to
+                    connect, feel free to drop me an email. I'd love to hear from you!
+                  </p>
+                </div>
+              </div>
+
+              <div class="row introduction_btn_group d-flex justify-content-center align-items-center">
+                <button class="cursor-box pointer" onclick="location.href='about.html'">ABOUT</button>
+                <button class="cursor-box pointer" onclick="location.href='projects.html'">PROJECTS</button>
+              </div>
             </div>
-        </section>
-        
-        <section id="section-2">
-            <div class="container-fluid d-flex justify-content-center">
-                <div class="custom-container-skills py-5">
-                    
-                    <div class="row justify-content-center custom-row">
-                        <div class="col-sm-12 col-md-8 text-center">
-                            <h1 class="skills">SKILLS</h1>
-                            <div class="skills-btn-group">
-                                <button type="button" id="languages" class="btn btn-secondary">LANGUAGES</button>
-                                <button type="button" id="database" class="btn btn-secondary">DATABASE</button>
-                                <button type="button" id="webdev" class="btn btn-secondary">WEB DEVELOPMENT</button>
-                                <button type="button" id="desktop-app" class="btn btn-secondary">DESKTOP APPLICATION</button>
-                                <button type="button" id="back-end" class="btn btn-secondary">BACK END</button>
-                                <button type="button" id="software" class="btn btn-secondary">SOFTWARE</button>
-                                <button type="button" id="core" class="btn btn-secondary">CORE CONCEPTS</button>
-                            </div>
-                            <div id="change-skills">
-                                <h2 class="sub-titile">CORE PROGRAMMING</h2>
-                                <h2>JAVA</h2>
-                                <p class="sub-p">INFO</p>
-                                <p>
-                                    Proficient in Java, with experience developing both small- and large-scale applications.
-                                    Skilled in JavaFX and GUI development, and familiar with IDEs such as Eclipse, BlueJ,
-                                    and IntelliJ IDEA. Knowledgeable in Agile Software Development methodologies, including
-                                    SCRUM and Waterfall, as well as SDLC principles, Data Structures & Algorithms, and
-                                    Design Patterns. Currently leading an Agile group project while developing multiple
-                                    desktop applications.
-                                </p>
+          </div>
+        </div>
+      </section>
 
-                                <p class="project-ex">
-                                    <strong>Project Example:</strong> <a
-                                        href="https://github.com/abdursujon/sputnik-vehicle-hire" target="_blank">Sputnik
-                                        Vehicle Hire</a>
-                                </p>
-                                <hr>
-                                <h2>JavaScript</h2>
-                                <p class="sub-p">INFO</p>
-                                <p>JavaScript is one of my favorite languages. I've built a variety of products with it -
-                                    from small tools to large-scale applications.
-                                    I work with JavaScript daily across desktop, tablet, mobile, and server environments.
-                                    Combined
-                                    with a strong understanding of UX and design, I'm able to take applications from concept
-                                    all the way to polished, production-ready solutions.
-                                </p>
-                                <p class="project-ex">
-                                    <strong>Project Example:</strong> <a href="https://emilias-della-roma.netlify.app/"
-                                        target="_blank">Emilia's Della Roma</a>
-                                </p>
-                                <hr>
-
-                                <h2>PHP</h2>
-                                <p class="sub-p">INFO</p>
-                                <p>
-                                    I specialize in building data-driven, full-stack websites. My primary tool for
-                                    server-side logic is PHP, which I use in conjunction with SQL databases like SQLite. I
-                                    follow best practices such as MVC architecture and Object-Oriented Programming (OOP) to
-                                    create scalable and maintainable code. For the front end, I combine JavaScript,
-                                    Bootstrap, CSS, and HTML to deliver responsive and interactive user experiences.
-                                </p>
-
-                                <p class="project-ex">
-                                    <strong>Upcoming Project:</strong> Pet Watch (Coming Soon)
-                                </p>
-                                <hr>
-
-                                <h2>C#</h2>
-                                <p class="sub-p">INFO</p>
-                                <p>Familiar with C#, I have built a Windows desktop application using .NET forms.
-                                </p>
-                                <p class="project-ex"><strong>Project Example:</strong> <a
-                                        href="https://github.com/abdursujon/North-Trafford-Group-Practice-Clone/tree/main"
-                                        target="_blank">North Trafford GP (Clone)</a></p>
-                            </div>
-
-                        </div>
-                    </div>
-                    </div>
+      <section id="section-2">
+        <div class="container-fluid d-flex justify-content-center ">
+          <div class="custom-container-skills ">
+            <div class="row justify-content-center custom-row">
+              <div class="col-sm-12 col-md-8 text-center">
+                <h1 class="skills">SKILLS</h1>
+                <div class="skills-btn-group">
+                  <button type="button" id="languages" class="btn btn-secondary">LANGUAGES</button>
+                  <button type="button" id="database" class="btn btn-secondary">DATABASE</button>
+                  <button type="button" id="webdev" class="btn btn-secondary">WEB DEVELOPMENT</button>
+                  <button type="button" id="desktop-app" class="btn btn-secondary">DESKTOP APPLICATION</button>
+                  <button type="button" id="back-end" class="btn btn-secondary">BACK END</button>
+                  <button type="button" id="software" class="btn btn-secondary">SOFTWARE</button>
+                  <button type="button" id="core" class="btn btn-secondary">CORE CONCEPTS</button>
+                </div>
+                <div id="change-skills">
+                  <h2 class="sub-titile">CORE PROGRAMMING</h2>
+                  <h2>JAVA</h2>
+                  <p class="sub-p">INFO</p>
+                  <p>
+                    Proficient in Java, with experience developing both small- and large-scale applications. Skilled in
+                    JavaFX and GUI development, and familiar with IDEs such as Eclipse, BlueJ, and IntelliJ IDEA.
+                    Knowledgeable in Agile Software Development methodologies, including SCRUM and Waterfall, as well as
+                    SDLC principles, Data Structures & Algorithms, and Design Patterns. Currently leading an Agile group
+                    project while developing multiple desktop applications.
+                  </p>
+                  <p class="project-ex">
+                    <strong>Project Example:</strong>
+                    <a href="https://github.com/abdursujon/sputnik-vehicle-hire" target="_blank"
+                      >Sputnik Vehicle Hire</a
+                    >
+                  </p>
+                  <hr />
+                  <h2>JavaScript</h2>
+                  <p class="sub-p">INFO</p>
+                  <p>
+                    JavaScript is one of my favorite languages. I've built a variety of products with it - from small
+                    tools to large-scale applications. I work with JavaScript daily across desktop, tablet, mobile, and
+                    server environments. Combined with a strong understanding of UX and design, I'm able to take
+                    applications from concept all the way to polished, production-ready solutions.
+                  </p>
+                  <p class="project-ex">
+                    <strong>Project Example:</strong>
+                    <a href="https://emilias-della-roma.netlify.app/" target="_blank">Emilia's Della Roma</a>
+                  </p>
+                  <hr />
+                  <h2>PHP</h2>
+                  <p class="sub-p">INFO</p>
+                  <p>
+                    I specialize in building data-driven, full-stack websites. My primary tool for server-side logic is
+                    PHP, which I use in conjunction with SQL databases like SQLite. I follow best practices such as MVC
+                    architecture and Object-Oriented Programming (OOP) to create scalable and maintainable code. For the
+                    front end, I combine JavaScript, Bootstrap, CSS, and HTML to deliver responsive and interactive user
+                    experiences.
+                  </p>
+                  <p class="project-ex"><strong>Upcoming Project:</strong> Pet Watch (Coming Soon)</p>
+                  <hr />
+                  <h2>C#</h2>
+                  <p class="sub-p">INFO</p>
+                  <p>Familiar with C#, I have built a Windows desktop application using .NET forms.</p>
+                  <p class="project-ex">
+                    <strong>Project Example:</strong>
+                    <a
+                      href="https://github.com/abdursujon/North-Trafford-Group-Practice-Clone/tree/main"
+                      target="_blank"
+                      >North Trafford GP (Clone)</a
+                    >
+                  </p>
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
+
     <footer id="footer-placeholder"></footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-        </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous">
-        </script>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/main.js"></script>
-
-</body>
-
+  </body>
 </html>

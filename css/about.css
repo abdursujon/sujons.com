@@ -2,137 +2,136 @@
    HERO CAROUSEL SECTION
    =================================================================== */
 .about-container {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-    color: white;
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-size: 48px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 48px;
 }
 
 .learn-more-link {
-    margin: 20px;
+  margin: 20px;
 }
 
-.learn-more-link>a {
-    background-color: transparent;
-    color: white;
-    width: 150px;
-    padding: 10px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    border: 2px solid white;
-    border-radius: 20px;
-    text-decoration: none;
-    margin-top: 20px;
+.learn-more-link > a {
+  background-color: transparent;
+  color: white;
+  width: 150px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 2px solid white;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-top: 20px;
 }
 
-.learn-more-link>a:hover {
-    background-color: white;
-    color: #007378;
+.learn-more-link > a:hover {
+  background-color: white;
+  color: #007378;
 }
 
 .custom-btn {
-    background-color: white;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin: 20px;
-    border: 2px solid white;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 20px;
+  border: 2px solid white;
 }
 
 .custom-btn:hover {
-    background: black;
+  background: black;
 }
 
 .carousel-caption {
-    top: 50%;
-    transform: translateY(-50%);
+  top: 50%;
+  transform: translateY(-50%);
 }
-
 
 /* ===================================================================
    ABOUT ME CONTENT SECTION
    =================================================================== */
 .about-section-1-container {
-    /* Apply the same animated gradient as the projects page */
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        /* Dark overlay */
-        linear-gradient(320deg, rgb(41, 74, 66) 3%, rgb(18, 40, 62) 38%, rgb(66, 50, 28) 68%, rgb(33, 26, 26) 98%);
-    /* Original gradient */
-    animation: gradient 18s ease infinite;
-    background-size: 180% 180%;
-    padding: 80px 0px;
+  /* Apply the same animated gradient as the projects page */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    /* Dark overlay */
+      linear-gradient(320deg, rgb(41, 74, 66) 3%, rgb(18, 40, 62) 38%, rgb(66, 50, 28) 68%, rgb(33, 26, 26) 98%);
+  /* Original gradient */
+  animation: gradient 18s ease infinite;
+  background-size: 180% 180%;
+  padding: 80px 0px;
 }
 
 .about-profile img {
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 25px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 /* ===================================================================
    MEDIA QUERIES
    =================================================================== */
 @media (max-width: 991px) {
+  /* Section 1 */
+  .about-section-1-container {
+    padding: 50px 0px;
+  }
 
-    /* Section 1 */
-    .about-section-1-container {
-        padding: 50px 0px;
-    }
+  h1 {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+  }
 
-    h1 {
-        color: white;
-        font-family: "Roboto", sans-serif;
-        font-weight: 900;
-        font-size: 40px;
-    }
+  h2 {
+    font-size: 1.2em;
+  }
 
-    h2 {
-        font-size: 1.2em;
-    }
+  .carousel {
+    height: 80vh;
+    margin: 0px;
+    margin-top: 0;
+    margin-bottom: 0px;
+    border-style: none;
+  }
 
-    .carousel {
-        height: 80vh;
-        margin: 0px;
-        margin-top: 0;
-        margin-bottom: 0px;
-        border-style: none;
-    }
+  .carousel-item img {
+    height: 80vh;
+  }
 
-    .carousel-item img {
-        height: 80vh;
-    }
+  .custom-btn {
+    margin: 10px;
+  }
 
-    .custom-btn {
-        margin: 10px;
-    }
+  .about-profile img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-    .about-profile img {
-        width: 350px;
-        height: 350px;
-        object-fit: cover;
-        border-radius: 25px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+  .profile-intro figure {
+    /* Add space below the animated title on small screens */
+    margin-bottom: 80px;
+  }
 
-    .profile-intro figure {
-        /* Add space below the animated title on small screens */
-        margin-bottom: 80px;
-    }
-
-    /* section 2 */
-    .about-me-para>p {
-        color: whitesmoke;
-        margin-left: 0;
-        margin-right: 0;
-    }
+  /* section 2 */
+  .about-me-para > p {
+    color: whitesmoke;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
