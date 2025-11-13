@@ -1,65 +1,77 @@
 <nav class="navbar navbar-expand-lg custom-navbar">
   <div class="container-fluid container-lg">
 
+    <!-- BRAND -->
     <a class="navbar-brand custom-brand d-flex align-items-center" href="/">
-      <img src="assets/home/icon/github.png" alt="github" id="logo-img"/>
-
+      <img
+        id="logo-img"
+        class="themed-icon"
+        data-dark="assets/home/icon/logo_white.png"
+        data-light="assets/home/icon/logo_black.png"
+        alt="Site Logo"
+      />
       <div class="split-text-container">
         <span class="text-part left">Abdur</span>
         <span class="text-part right">Sujon</span>
       </div>
     </a>
 
-    <button
-      class="navbar-toggler custom-navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <svg
-        class="menu-icon"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-    </button>
+    <!-- MOBILE RIGHT CONTROLS (xs–md): THEME + BURGER -->
+    <div class="d-flex align-items-center ms-auto d-lg-none">
 
+      <button class="theme-toggle-btn me-2 mobile-theme-toggle" title="Toggle theme">
+        <img id="mobile-theme-icon" src="assets/home/icon/sun.svg" alt="theme" />
+      </button>
+
+      <button
+        class="navbar-toggler custom-navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- DESKTOP NAV -->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
+
         <a class="nav-link" href="/" title="Home">Home</a>
         <a class="nav-link" href="about.html" title="About Me">About</a>
         <a class="nav-link" href="index.html#section-2" title="My Skills">Skills</a>
         <a class="nav-link" href="projects.html" title="View My Projects">Projects</a>
-        <a class="nav-link" href="assets/home/Abdur_Sujon_CV_Web_Version.pdf" target="_blank" title="View My CV">CV</a>
+        <a class="nav-link" href="assets/home/Abdur_Sujon_CV_Web_Version.pdf" target="_blank">CV</a>
 
         <div class="d-flex flex-row justify-content-start">
-          <a class="nav-link contact-link" href="mailto:abdur.sujon.dev@gmail.com" title="Email Me">
-            <img src="assets/home/icon/email.png" alt="email" />
-          </a>
-          <a class="nav-link contact-link" href="https://www.linkedin.com/in/abdursujon/" title="View My LinkedIn">
-            <img src="assets/home/icon/linkedin.png" alt="linkedin" />
-          </a>
-          <a class="nav-link contact-link" href="https://github.com/abdursujon" title="View My Github">
-            <img src="assets/home/icon/github.png" alt="github" />
+
+          <a class="nav-link contact-link" href="mailto:abdur.sujon.dev@gmail.com">
+            <img class="themed-icon" data-dark="assets/home/icon/email_white.png" data-light="assets/home/icon/email_black.png" alt="email" />
           </a>
 
-          <!-- THEME TOGGLE BUTTON -->
-          <button id="theme-toggle" class="theme-toggle-btn" title="Toggle theme">
-            <img id="theme-icon" src="assets/home/icon/sun.svg" alt="theme icon" />
+          <a class="nav-link contact-link" href="https://www.linkedin.com/in/abdursujon/">
+            <img class="themed-icon" data-dark="assets/home/icon/linkedin_white.png" data-light="assets/home/icon/linkedin_black.png" alt="linkedin" />
+          </a>
+
+          <a class="nav-link contact-link" href="https://github.com/abdursujon">
+            <img class="themed-icon" data-dark="assets/home/icon/github_white.png" data-light="assets/home/icon/github_black.png" alt="github" />
+          </a>
+
+          <!-- DESKTOP THEME TOGGLE -->
+          <button id="theme-toggle" class="theme-toggle-btn d-none d-lg-inline-block ms-2" title="Toggle theme">
+            <img id="theme-icon" src="assets/home/icon/sun.svg" alt="theme" />
           </button>
+
         </div>
       </div>
     </div>

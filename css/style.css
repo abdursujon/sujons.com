@@ -16,6 +16,12 @@
   --shadow-subtle: 0 4px 10px rgba(0, 0, 0, 0.2);
   --shadow-lift: 0 0 30px rgba(0, 0, 0, 0.5);
   --border-subtle: 1px solid rgba(255, 255, 255, 0.1);
+  --color-skill-bg: rgba(255, 255, 255, 0.05);
+  --color-skill-bg: #ffffff;
+  --color-skill-card-bg: rgba(255,255,255,0.05);
+
+
+
 }
 /* LIGHT MODE */
 :root.light {
@@ -26,6 +32,7 @@
   --border-subtle: 1px solid rgba(0, 0, 0, 0.12);
   --shadow-subtle: 0 4px 10px rgba(0, 0, 0, 0.08);
   --shadow-lift: 0 0 30px rgba(0, 0, 0, 0.15);
+  
 }
 
 /* Toggle button style */
@@ -230,12 +237,13 @@ hr {
   transform: translateY(-1px);
 }
 
-.contact-link img {
-  filter: brightness(0) invert(1);
-  height: 20px;
-  width: 20px;
-  margin-top: 0;
+.contact-link img,
+.footer-icon img {
+  filter: none;
+  height: 25px;
+  width: 25px;
 }
+
 
 .navbar-collapse .navbar-nav {
   text-align: left;
@@ -385,11 +393,13 @@ hr {
   height: auto;
   min-height: 500px;
   padding-top: 40px;
-  background-color: rgba(255, 255, 255, 0.05);
+
+  background-color: var(--color-skill-bg);
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: var(--border-subtle);
   box-shadow: var(--shadow-lift);
+
   margin-top: 20px;
 }
 
@@ -465,11 +475,6 @@ hr {
   margin-bottom: 5px;
 }
 
-.footer-icon img {
-  height: 20px;
-  width: 20px;
-  filter: brightness(0) invert(1);
-}
 
 .rights {
   color: rgba(255, 255, 255, 0.6);
@@ -641,12 +646,11 @@ hr {
 }
 
 .skill-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: var(--radius-default);
+  background: var(--color-skill-card-bg);
   border: var(--border-subtle);
   box-shadow: var(--shadow-subtle);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
 
 .skill-card:hover {
   transform: translateY(-5px);
@@ -690,4 +694,30 @@ hr {
   .skill-grid:not(:has(.col-lg-3:nth-child(4))) {
     justify-content: center !important;
   }
+}
+:root.light .custom-container-skills {
+  background: #ffffff;
+  border-color: rgba(0,0,0,0.12);
+}
+
+:root.light .skill-card {
+  background: rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+:root.light .skills {
+  color: #007aff;
+}
+
+:root.light .sub-p {
+  color: rgba(0,0,0,0.5);
+}
+
+:root.light .skill-desc {
+  color: #1d1d1f;
+}
+
+:root.light section#section-2 {
+  background-color: #ffffff;
 }
