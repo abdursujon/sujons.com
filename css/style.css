@@ -120,7 +120,7 @@ hr {
 }
 
 /* Logo scaling (auto-centers perfectly in 60px navbar) */
-.logo-img {
+#logo-img {
   height: 30px;
   width: auto;
   object-fit: contain;
@@ -515,7 +515,7 @@ hr {
   }
 
   /* Smaller logo for mobile if desired */
-  .logo-img {
+  #logo-img {
     height: 25px;
     margin-left:10px;
   }

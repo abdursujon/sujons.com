@@ -79,7 +79,7 @@ function initializeThemeToggle() {
   } else {
     document.documentElement.classList.remove("light");
     themeIcon.src = "assets/home/icon/sun.svg";
-    siteLogo.src = "assets/home/icon/logo.png";
+    siteLogo.src = "assets/home/icon/logo_white.png";
   }
 
   // CLICK TO TOGGLE
