@@ -61,7 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function initializeThemeToggle() {
   const toggleBtn = document.getElementById("theme-toggle");
   const themeIcon = document.getElementById("theme-icon");
-  const siteLogo = document.querySelector(".logo-img");
+ const siteLogo = document.querySelector("#logo-img");
+
 
   if (!toggleBtn || !themeIcon || !siteLogo) return;
 

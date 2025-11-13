@@ -691,14 +691,3 @@ hr {
     justify-content: center !important;
   }
 }
-.icon-svg {
-  stroke: var(--color-text-dark);
-  fill: var(--color-text-dark);
-  transition: 0.25s ease;
-}
-
-/* Light mode fix */
-:root.light .icon-svg {
-  stroke: var(--color-text-light);
-  fill: var(--color-text-light);
-}
