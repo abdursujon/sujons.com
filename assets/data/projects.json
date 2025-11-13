@@ -1,0 +1,65 @@
+[
+    {
+        "title": "Emilia's Della Roma",
+        "description": "Emilia's Della Roma replicates the core features of a real Italian restaurant website. Built mobile-first with modern UX principles and real functionality including contact forms, postcode API, and dynamic UI.",
+        "techStack": "Tech Stack: PHP, HTML, JavaScript, Bootstrap, PHTML, PHPMailer, Figma, Postcode.io",
+        "link": "https://emilias-della-roma.netlify.app/",
+        "images": [
+            "assets/projects/project 1/1.png",
+            "assets/projects/project 1/2.png",
+            "assets/projects/project 1/3.png",
+            "assets/projects/project 1/4.png",
+            "assets/projects/project 1/5.png",
+            "assets/projects/project 1/6.png",
+            "assets/projects/project 1/7.png",
+            "assets/projects/project 1/8.png"
+        ]
+    },
+    {
+        "title": "Star Calculator",
+        "description": "A responsive modern calculator with full arithmetic functionality, multiple themes, and customizable fonts. Designed for smooth interaction and clean UI.",
+        "techStack": "Tech Stack: JavaScript, CSS, HTML, Bootstrap",
+        "link": "https://star-calulator.netlify.app/",
+        "images": [
+            "assets/projects/project 2/1.png",
+            "assets/projects/project 2/2.png",
+            "assets/projects/project 2/3.png"
+        ]
+    },
+    {
+        "title": "North Trafford GP (Clone)",
+        "description": "A bilingual GP check-in and department locator system inspired by NHS surgery interfaces. Built using HCI research to enhance user accessibility.",
+        "techStack": "Tech Stack: C#, .NET, HCI, Microsoft Visual Studio",
+        "link": "https://github.com/abdursujon/North-Trafford-Group-Practice-Clone/tree/main",
+        "images": [
+            "assets/projects/project 3/1.png",
+            "assets/projects/project 3/2.png",
+            "assets/projects/project 3/3.png"
+        ]
+    },
+    {
+        "title": "Sputnik Vehicle Hire System",
+        "description": "A Java-based rental management system that handles customers, vehicles, file storage, and reservation conflict detection.",
+        "techStack": "Tech Stack: Java, BlueJ",
+        "link": "https://github.com/abdursujon/sputnik-vehicle-hire",
+        "images": [
+            "assets/projects/project 4/1.png",
+            "assets/projects/project 4/2.png",
+            "assets/projects/project 4/3.png",
+            "assets/projects/project 4/4.png",
+            "assets/projects/project 4/5.png",
+            "assets/projects/project 4/6.png"
+        ]
+    },
+    {
+        "title": "Mew Mate",
+        "description": "A fun Tinder-style matchmaking app — for cats. Swipe cards, match profiles, and explore a playful UI demonstrating animations and responsive design.",
+        "techStack": "Tech Stack: JavaScript, CSS, HTML",
+        "link": "https://mewmate.netlify.app/",
+        "images": [
+            "assets/projects/project 5/1.png",
+            "assets/projects/project 5/2.png",
+            "assets/projects/project 5/3.png"
+        ]
+    }
+]

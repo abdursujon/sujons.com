@@ -1,0 +1,178 @@
+[
+  {
+    "category": "Core Programming",
+    "skills": [
+      {
+        "title": "Java",
+        "info": "INFO",
+        "description": "Strong understanding of object-oriented programming, JavaFX, data structures, algorithms, and multi-module applications. I regularly build desktop tools, console programs, and academic systems using clean architectural patterns.",
+        "project": {
+          "name": "Sputnik Vehicle Hire",
+          "link": "https://github.com/abdursujon/sputnik-vehicle-hire"
+        }
+      },
+      {
+        "title": "JavaScript",
+        "info": "INFO",
+        "description": "JavaScript is my primary language for interactive UI, event-driven programming, and web experiences. I work across the DOM, fetch API, async processes, and component-based thinking.",
+        "project": {
+          "name": "Emilia's Della Roma",
+          "link": "https://emilias-della-roma.netlify.app/"
+        }
+      },
+      {
+        "title": "PHP",
+        "info": "INFO",
+        "description": "I build full-stack web applications using PHP with SQL databases. I structure back-end logic using OOP, separation of concerns, and secure form processing.",
+        "project": null
+      },
+      {
+        "title": "C#",
+        "info": "INFO",
+        "description": "Experience using C# for Windows desktop applications with .NET Forms and event-driven programming.",
+        "project": {
+          "name": "North Trafford GP Clone",
+          "link": "https://github.com/abdursujon/North-Trafford-Group-Practice-Clone/tree/main"
+        }
+      }
+    ]
+  },
+  {
+    "category": "Database",
+    "skills": [
+      {
+        "title": "SQL / MySQL",
+        "info": "INFO",
+        "description": "Experience designing relational databases, writing optimized queries, and working with phpMyAdmin for CRUD operations and schema management.",
+        "project": null
+      },
+      {
+        "title": "SQLite",
+        "info": "INFO",
+        "description": "Used primarily with PHP and Java for file-based, secure, lightweight data storage.",
+        "project": null
+      }
+    ]
+  },
+  {
+    "category": "Web Development",
+    "skills": [
+      {
+        "title": "HTML & CSS",
+        "info": "INFO",
+        "description": "I create clean, responsive, accessible UI using semantic HTML and structured CSS. I maintain consistent typography, spacing, and design principles.",
+        "project": null
+      },
+      {
+        "title": "Bootstrap",
+        "info": "INFO",
+        "description": "I combine Bootstrap with custom CSS to create responsive, modern layouts while keeping full design control.",
+        "project": null
+      },
+      {
+        "title": "JavaScript (Front-End)",
+        "info": "INFO",
+        "description": "I build UI logic, dynamic components, animations, and full interactive flows using modular JavaScript.",
+        "project": {
+          "name": "Star Calculator",
+          "link": "https://star-calulator.netlify.app/"
+        }
+      },
+      {
+        "title": "UI / UX & Web Design",
+        "info": "INFO",
+        "description": "Skilled with design tools such as Figma, Inkscape, and Canva to create prototypes, wireframes, and polished visuals.",
+        "project": null
+      }
+    ]
+  },
+  {
+    "category": "Desktop Applications",
+    "skills": [
+      {
+        "title": "JavaFX",
+        "info": "INFO",
+        "description": "Used for creating structured UI applications with event-driven interfaces and scene-based layouts.",
+        "project": null
+      },
+      {
+        "title": "C# Windows Forms",
+        "info": "INFO",
+        "description": "Experience building desktop software with form-based navigation, user input, and logic processing.",
+        "project": {
+          "name": "North Trafford GP Clone",
+          "link": "https://github.com/abdursujon/North-Trafford-Group-Practice-Clone/tree/main"
+        }
+      }
+    ]
+  },
+  {
+    "category": "Back-End Development",
+    "skills": [
+      {
+        "title": "PHP Back-End",
+        "info": "INFO",
+        "description": "API creation, form validation, authentication, and server-side application logic with MySQL or SQLite.",
+        "project": null
+      },
+      {
+        "title": "Server Environments",
+        "info": "INFO",
+        "description": "Experienced with XAMPP, Apache configuration, directory structure, and development pipelines.",
+        "project": null
+      },
+      {
+        "title": "Networking Concepts",
+        "info": "INFO",
+        "description": "Understanding of client-server systems, network communication, sessions, cookies, and API flow.",
+        "project": null
+      }
+    ]
+  },
+  {
+    "category": "Software Tools",
+    "skills": [
+      {
+        "title": "IDEs & Editors",
+        "info": "INFO",
+        "description": "Proficient with VS Code, PhpStorm, IntelliJ IDEA, BlueJ, and Vim for development workflows.",
+        "project": null
+      },
+      {
+        "title": "Version Control",
+        "info": "INFO",
+        "description": "Daily use of Git and Git Bash for commits, branches, merges, and collaboration.",
+        "project": null
+      },
+      {
+        "title": "Design Tools",
+        "info": "INFO",
+        "description": "Figma, Inkscape, Canva, and Adobe tools for planning and asset creation.",
+        "project": null
+      }
+    ]
+  },
+  {
+    "category": "Core Computing Concepts",
+    "skills": [
+      {
+        "title": "Data Structures & Algorithms",
+        "info": "INFO",
+        "description": "Strong theoretical and practical understanding of DSA, complexity, recursion, and optimization.",
+        "project": null
+      },
+      {
+        "title": "Design Patterns",
+        "info": "INFO",
+        "description": "Familiar with reusable software patterns that improve maintainability and structure.",
+        "project": null
+      },
+      {
+        "title": "Human-Computer Interaction",
+        "info": "INFO",
+        "description": "Experience conducting real user testing, accessibility tuning, and color-contrast research.",
+        "project": null
+      }
+    ]
+  }
+]
