@@ -55,9 +55,9 @@ function renderAllProjects(projects) {
 
           <!-- RIGHT - TEXT -->
           <div class="col-md-6">
-            <h2 class="fw-bold mb-3" style="color:white">${project.title}</h2>
-            <p class="mb-2" style="color:white">${project.description}</p>
-            <p class="mb-3 fw-bold" style="color:white">${project.techStack}</p>
+            <h2 class="fw-bold mb-3 project-title">${project.title}</h2>
+<p class="mb-2 project-desc">${project.description}</p>
+<p class="mb-3 fw-bold project-tech">${project.techStack}</p>
 
             <a href="${project.link}" target="_blank" class="btn btn-dark mb-3">Launch</a>
           </div>
@@ -95,7 +95,6 @@ function renderImage(idx) {
 
   // FULL IMAGE, NO CROPPING
   img.style.objectFit = "contain";
-  img.style.background = "black";
 
   updateDots(idx);
 }

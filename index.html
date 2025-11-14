@@ -7,7 +7,7 @@
   <title>Sujon</title>
 
   <script>
-    (function() {
+    (function () {
       const saved = localStorage.getItem("theme");
       if (saved === "light") {
         document.documentElement.classList.add("light");
@@ -41,22 +41,24 @@
                 <h1 class="text-center fs-5 fs-md-4 fs-lg-3 fw-semibold">
                   <span class="d-block d-md-inline mt-2">BSc Computer Science Candidate</span>
                   <span class="d-none d-md-inline"> | </span>
-                  <span class="d-block d-md-inline">Software Engineer with AI</span>
+                  <span class="d-block d-md-inline">Software Engineering with AI</span>
                 </h1>
                 <p id="greeting"></p>
               </div>
 
               <div class="col-12 text-start">
                 <p>
-                  Hi, I’m Sujon - a Computer Science student at the University of Salford and a full-stack software
-                  developer. My journey began in 2022 when I first explored web development through self-learning and
+                  Hi, I’m Sujon - a Computer Science student at the University of Salford who is specializing software
+                  engineering with AI. My journey began in 2022 when I first explored web development through
+                  self-learning and
                   quickly discovered my passion for creating solutions through code.
                 </p>
                 <p>
                   I joined the University of Salford to deepen my knowledge and gain a strong academic foundation. My
                   decision was driven by genuine interest - I believe a career should be meaningful and fulfilling.
-                  I’ve worked on several personal projects and am currently gaining hands-on experience as a team leader
-                  at Salford Hack Camp, utilizing Agile development practices to deliver a software solution for a real
+                  I’ve build projects as hobby to solve real life problems and currently gaining hands-on experience as
+                  a software engineer at
+                  Salford Hack Camp, utilizing Agile development practices to deliver a software solution for a real
                   client.
                 </p>
                 <p>
@@ -76,32 +78,32 @@
     </section>
 
     <section id="section-2">
-  <div class="container-fluid d-flex justify-content-center">
-    <div class="custom-container-skills">
-      <div class="row justify-content-center custom-row">
-        <div class="col-sm-12 col-md-8 text-center">
+      <div class="container-fluid d-flex justify-content-center">
+        <div class="custom-container-skills">
+          <div class="row justify-content-center custom-row">
+            <div class="col-sm-12 col-md-8 text-center">
 
-          <h1 class="skills">SKILLS</h1>
+              <h1 class="skills">SKILLS</h1>
 
-          <!-- Button group stays (optional) -->
-          <div class="skills-btn-group">
-            <button type="button" id="languages" class="btn btn-secondary">LANGUAGES</button>
-            <button type="button" id="database" class="btn btn-secondary">DATABASE</button>
-            <button type="button" id="webdev" class="btn btn-secondary">WEB DEVELOPMENT</button>
-            <button type="button" id="desktop-app" class="btn btn-secondary">DESKTOP APPLICATION</button>
-            <button type="button" id="back-end" class="btn btn-secondary">BACK END</button>
-            <button type="button" id="software" class="btn btn-secondary">SOFTWARE</button>
-            <button type="button" id="core" class="btn btn-secondary">CORE CONCEPTS</button>
+              <!-- Button group stays (optional) -->
+              <div class="skills-btn-group">
+                <button type="button" id="languages" class="btn btn-secondary">LANGUAGES</button>
+                <button type="button" id="database" class="btn btn-secondary">DATABASE</button>
+                <button type="button" id="webdev" class="btn btn-secondary">WEB DEVELOPMENT</button>
+                <button type="button" id="desktop-app" class="btn btn-secondary">DESKTOP APPLICATION</button>
+                <button type="button" id="back-end" class="btn btn-secondary">BACK END</button>
+                <button type="button" id="software" class="btn btn-secondary">SOFTWARE</button>
+                <button type="button" id="core" class="btn btn-secondary">CORE CONCEPTS</button>
+              </div>
+
+              <!-- EMPTY container → skills.js will fill it using JSON -->
+              <div id="change-skills"></div>
+
+            </div>
           </div>
-
-          <!-- EMPTY container → skills.js will fill it using JSON -->
-          <div id="change-skills"></div>
-
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
   </main>
 

@@ -1,7 +1,7 @@
 [
     {
         "title": "Emilia's Della Roma",
-        "description": "Emilia's Della Roma replicates the core features of a real Italian restaurant website. Built mobile-first with modern UX principles and real functionality including contact forms, postcode API, and dynamic UI.",
+        "description": "Emilia's Della Roma replicates the core features of a real Italian restaurant website. Built with mobile-first approach with modern UX principles and real functionality including contact forms, postcode API, and dynamic UI.",
         "techStack": "Tech Stack: PHP, HTML, JavaScript, Bootstrap, PHTML, PHPMailer, Figma, Postcode.io",
         "link": "https://emilias-della-roma.netlify.app/",
         "images": [

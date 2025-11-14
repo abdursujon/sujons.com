@@ -17,7 +17,6 @@
   --shadow-lift: 0 0 30px rgba(0, 0, 0, 0.5);
   --border-subtle: 1px solid rgba(255, 255, 255, 0.1);
   --color-skill-bg: rgba(255, 255, 255, 0.05);
-  --color-skill-bg: #ffffff;
   --color-skill-card-bg: rgba(255,255,255,0.05);
 
 
@@ -393,7 +392,7 @@ hr {
   height: auto;
   min-height: 500px;
   padding-top: 40px;
-
+  
   background-color: var(--color-skill-bg);
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
@@ -720,4 +719,18 @@ hr {
 
 :root.light section#section-2 {
   background-color: #ffffff;
+}
+:root.light .navbar-nav .nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+  color: var(--color-text-dark) !important;
+}
+
+:root.light .contact-link:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+  color: var(--color-text-dark) !important;
+}
+
+:root.light .nav-link svg,
+:root.light .contact-link img {
+  filter: brightness(0); /* make icons dark */
 }

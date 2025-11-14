@@ -4,6 +4,9 @@
 body {
   background-color: var(--color-background-dark);
 }
+:root.light .dot { background: rgba(0,0,0,0.2); }
+:root.light .arrow-btn { border-color: rgba(0,0,0,0.2); }
+:root.light .arrow-btn:hover { background-color: rgba(0,0,0,0.1); }
 
 .carousel-image {
   border-radius: 50px !important;
@@ -269,4 +272,17 @@ body {
   opacity: 1;
   transform: translateY(0) scale(1);
   filter: blur(0);
+}
+.project-title,
+.project-desc,
+.project-tech {
+  color: var(--color-text-dark) !important;
+}
+
+:root.light .project-image-div {
+  background: #f2f2f2 !important;
+}
+
+:root.light .project-image-div img {
+  background: #f2f2f2 !important;
 }

@@ -28,8 +28,8 @@ function renderSkills(categories) {
 
         <div class="row g-4 skill-grid">
           ${category.skills
-            .map(skill => createSkillCard(skill))
-            .join("")}
+        .map(skill => createSkillCard(skill))
+        .join("")}
         </div>
       </div>
     `;
@@ -42,19 +42,17 @@ function renderSkills(categories) {
 function createSkillCard(skill) {
   return `
     <div class="col-12 col-md-6 col-lg-3">
-      <div class="skill-card p-4 h-100">
+      <div class="skill-card p-4 h-100 rounded">
         <h3>${skill.title}</h3>
-        <p class="sub-p">${skill.info}</p>
         <p class="skill-desc">${skill.description}</p>
 
-        ${
-          skill.project
-            ? `<p class="project-ex">
+        ${skill.project
+      ? `<p class="project-ex">
                  <strong>Project Example:</strong>
                  <a href="${skill.project.link}" target="_blank">${skill.project.name}</a>
                </p>`
-            : ""
-        }
+      : ""
+    }
       </div>
     </div>
   `;
