@@ -1,11 +1,8 @@
-/* ======================================================
-   LOAD SKILLS JSON + RENDER
-   ====================================================== */
-
 document.addEventListener("DOMContentLoaded", () => {
   loadSkills();
 });
 
+// Load JSON
 function loadSkills() {
   fetch("assets/data/skills.json")
     .then(res => res.json())
@@ -13,66 +10,90 @@ function loadSkills() {
     .catch(err => console.error("Failed to load skills.json:", err));
 }
 
+// Render categories + accordion
 function renderSkills(categories) {
   const container = document.querySelector(".custom-container-skills");
   if (!container) return;
 
-  container.innerHTML = ""; // clear old button-style layout
+  container.innerHTML = `
+    <h1 class="skills text-center mb-4">Skills</h1>
+    <p class="text-center" style="opacity:0.7;">My technical & other skills</p>
+    <div class="skills-wrapper"></div>
+  `;
 
-  categories.forEach((category, index) => {
-    const section = document.createElement("section");
-    section.className = "skill-section fade-in-up";
-    section.innerHTML = `
-      <div class="container py-5">
-        <h1 class="skills text-center mb-4">${category.category}</h1>
+  const wrapper = container.querySelector(".skills-wrapper");
 
-        <div class="row g-4 skill-grid">
-          ${category.skills
-        .map(skill => createSkillCard(skill))
-        .join("")}
-        </div>
-      </div>
-    `;
-    container.appendChild(section);
+  categories.forEach((cat, index) => {
+    wrapper.innerHTML += createCategoryHTML(cat, index);
   });
 
-  setupSkillObserver();
+  initAccordions();
 }
 
-function createSkillCard(skill) {
+// Create category block (left side)
+function createCategoryHTML(category, index) {
   return `
-    <div class="col-12 col-md-6 col-lg-3">
-      <div class="skill-card p-4 h-100 rounded">
-        <h3>${skill.title}</h3>
-        <p class="skill-desc">${skill.description}</p>
+    <div class="skill-category" data-index="${index}">
+      <div class="skill-cat-header">
+        <div class="left-side">
+          <span class="skill-icon">${getIcon(category.icon)}</span>
+          <div>
+            <h3>${category.category}</h3>
+            <p class="xp">${category.experience}</p>
+          </div>
+        </div>
 
-        ${skill.project
-      ? `<p class="project-ex">
-                 <strong>Project Example:</strong>
-                 <a href="${skill.project.link}" target="_blank">${skill.project.name}</a>
-               </p>`
-      : ""
-    }
+        <div class="arrow">&#9662;</div>
+      </div>
+
+      <div class="skill-items">
+        ${category.skills
+          .map(skill => createSkillBar(skill))
+          .join("")}
       </div>
     </div>
   `;
 }
 
-/* ======================================================
-   SCROLL REVEAL (Same as projects)
-   ====================================================== */
+// Create skill progress bar (right side)
+function createSkillBar(skill) {
+  return `
+    <div class="skill-bar">
+      <div class="skill-title">${skill.name}<span>${skill.level}%</span></div>
 
-function setupSkillObserver() {
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        entry.target.classList.toggle("visible", entry.isIntersecting);
-      });
-    },
-    { threshold: 0.15 }
-  );
+      <div class="progress">
+        <div class="progress-fill" style="width:${skill.level}%"></div>
+      </div>
+    </div>
+  `;
+}
 
-  document.querySelectorAll(".skill-section").forEach(section => {
-    observer.observe(section);
+// SVG icon mapping
+function getIcon(type) {
+  const icons = {
+    code: "💻",
+    frontend: "🎨",
+    server: "🖥️",
+    devops: "⚙️"
+  };
+  return icons[type] || "🔧";
+}
+
+// Accordion logic
+function initAccordions() {
+  const categories = document.querySelectorAll(".skill-category");
+
+  categories.forEach(cat => {
+    const header = cat.querySelector(".skill-cat-header");
+
+    header.addEventListener("click", () => {
+      const isOpen = cat.classList.contains("open");
+
+      // Close all
+      document.querySelectorAll(".skill-category").forEach(c => c.classList.remove("open"));
+
+      // Open this
+      if (!isOpen) cat.classList.add("open");
+    });
   });
 }

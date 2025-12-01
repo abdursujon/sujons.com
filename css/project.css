@@ -104,7 +104,6 @@ body {
   border-radius: var(--radius-default);
   overflow: hidden;
   background: black;          /* clean background behind contain images */
-
   display: flex;
   justify-content: center;
   align-items: center;

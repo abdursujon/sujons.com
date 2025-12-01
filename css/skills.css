@@ -1,0 +1,86 @@
+.skills-wrapper {
+  margin-top: 40px;
+}
+
+.skill-category {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.skill-cat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.skill-icon {
+  font-size: 28px;
+}
+
+.skill-category h3 {
+  margin: 0;
+}
+
+.xp {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.arrow {
+  font-size: 40px;
+  transition: transform 0.3s ease;
+  
+}
+
+.skill-category.open .arrow {
+  transform: rotate(180deg);
+}
+
+.skill-items {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  margin-top: 0;
+}
+
+.skill-category.open .skill-items {
+  max-height: 500px;
+}
+
+/* Progress bars */
+.skill-bar {
+  margin-bottom: 18px;
+}
+
+.skill-title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.progress {
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #7b61ff;
+  border-radius: 50px;
+}

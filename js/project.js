@@ -35,12 +35,14 @@ function renderAllProjects(projects) {
           <div class="col-md-6 mb-4">
             <div class="project-image-div">
               <img 
-                src="${project.images[0]}" 
+                src="${project.images[0]}"
+                loading="lazy"
                 class="img-fluid w-100 h-100"
                 id="img-${index}"
                 style="
-                  object-fit: contain;
-                  background:black;
+                  width: 100%;
+                  height: 100%;
+                  object-position: contain;
                 "
               >
             </div>
@@ -56,12 +58,14 @@ function renderAllProjects(projects) {
           <!-- RIGHT - TEXT -->
           <div class="col-md-6">
             <h2 class="fw-bold mb-3 project-title">${project.title}</h2>
-<p class="mb-2 project-desc">${project.description}</p>
-<p class="mb-3 fw-bold project-tech">${project.techStack}</p>
-
-            <a href="${project.link}" target="_blank" class="btn btn-dark mb-3">Launch</a>
+            <p class="mb-2 project-desc">${project.description}</p>
+            <p class="mb-3 fw-bold project-tech">${project.techStack}</p>
+            ${
+              project.comingSoon
+                ? `<span class="badge bg-secondary p-2">Coming Soon</span>`
+                : `<a href="${project.link}" target="_blank" class="btn btn-dark mb-3">Launch</a>`
+            }
           </div>
-
         </div>
       </div>
     `;
@@ -88,7 +92,7 @@ const projectStates = {};
 function renderImage(idx) {
   const state = projectStates[idx];
   const img = document.getElementById(`img-${idx}`);
-
+  img.loading = "lazy";
   img.src = state.images[state.current];
 
   img.classList.add("img-fluid", "w-100", "h-100");

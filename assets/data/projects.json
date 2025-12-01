@@ -1,5 +1,27 @@
 [
     {
+        "title": "PetWatch",
+       "description": "Full-stack app to help pet owner find their lost pets. Follows OOP fundamentals and MVC architecture<ul><li>Developed following the full SDLC process</li><li>Includes secure user authentication</li><li>Supports search, filters, and full CRUD operations</li></ul>",
+
+        "techStack": "Tech Stack: PHP, JavaScript, SQL, MySQL, SQlite, HTML5, CSS",
+        "comingSoon": true,
+        "link": "",
+        "images": [
+            "assets/projects/petwatch/1.png",
+            "assets/projects/petwatch/2.png",
+            "assets/projects/petwatch/3.png",
+            "assets/projects/petwatch/4.png",
+            "assets/projects/petwatch/5.png",
+            "assets/projects/petwatch/6.png",
+            "assets/projects/petwatch/7.png", 
+            "assets/projects/petwatch/8.png",
+            "assets/projects/petwatch/9.png",
+            "assets/projects/petwatch/10.png",
+            "assets/projects/petwatch/11.png",
+            "assets/projects/petwatch/12.png"
+        ]
+    },
+    {
         "title": "Emilia's Della Roma",
         "description": "Emilia's Della Roma replicates the core features of a real Italian restaurant website. Built with mobile-first approach with modern UX principles and real functionality including contact forms, postcode API, and dynamic UI.",
         "techStack": "Tech Stack: PHP, HTML, JavaScript, Bootstrap, PHTML, PHPMailer, Figma, Postcode.io",
