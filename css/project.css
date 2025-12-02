@@ -1,9 +1,10 @@
-/* ===================================================================
+/* ==========================
    GLOBAL BACKGROUND
-   =================================================================== */
+   ========================== */
 body {
   background-color: var(--color-background-dark);
 }
+
 :root.light .dot { background: rgba(0,0,0,0.2); }
 :root.light .arrow-btn { border-color: rgba(0,0,0,0.2); }
 :root.light .arrow-btn:hover { background-color: rgba(0,0,0,0.1); }
@@ -12,15 +13,17 @@ body {
   border-radius: 50px !important;
 }
 
-/* ===================================================================
-   PROJECTS CONTAINER (Apple-Style Card)
-   =================================================================== */
+/* ==========================
+   PROJECT CONTAINER CARD
+   ========================== */
+   #projects-container{
+    margin-top:100px !important;
+   }
 .custom-container {
   height: auto;
   max-height: 90vh;
   min-height: 500px;
   padding: 20px;
-
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -34,9 +37,9 @@ body {
   text-shadow: none;
 }
 
-/* ===================================================================
-   BUTTON STYLES
-   =================================================================== */
+/* ==========================
+   BUTTONS
+   ========================== */
 .btn-outline-secondary {
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -60,10 +63,9 @@ body {
   font-weight: bold;
   border-radius: var(--radius-button);
   padding: 10px 20px;
-  transition: all 0.2s ease;
+  transition: 0.2s ease;
   display: inline-block;
   border: none;
-
   background: var(--color-accent);
   color: white;
   box-shadow: var(--shadow-subtle);
@@ -74,8 +76,14 @@ body {
   box-shadow: 0 0 25px rgba(0, 122, 255, 0.6);
 }
 
+/* ==========================
+   TEXT COLORS
+   ========================== */
 #project-desc,
-#tech-stack {
+#tech-stack,
+.project-title,
+.project-desc,
+.project-tech {
   color: var(--color-text-dark) !important;
 }
 
@@ -83,9 +91,15 @@ body {
   font-weight: bold;
 }
 
-/* ===================================================================
-   PROJECT SECTION
-   =================================================================== */
+/* White bullet points for dark mode */
+:root:not(.light) #project-desc ul,
+:root:not(.light) #project-desc li {
+  color: #ffffff !important;
+}
+
+/* ==========================
+   PROJECT SECTION LAYOUT
+   ========================== */
 #project-section-1 {
   display: flex;
   justify-content: center;
@@ -95,15 +109,15 @@ body {
   background: var(--color-background-dark);
 }
 
-/* ===================================================================
-   FIXED-SIZE UNIFORM IMAGES (FULL IMAGE, NO CROPPING)
-   =================================================================== */
+/* ==========================
+   PROJECT IMAGES
+   ========================== */
 .project-image-div {
   width: 100%;
-  height: 380px;              /* SAME HEIGHT FOR ALL IMAGES */
+  height: 380px;
   border-radius: var(--radius-default);
   overflow: hidden;
-  background: black;          /* clean background behind contain images */
+  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,22 +126,30 @@ body {
 .project-image-div img {
   width: 100%;
   height: 100%;
-  object-fit: contain;         /* FULL IMAGE, NO CROPPING */
+  object-fit: contain;
   background: black;
   border-radius: inherit;
   box-shadow: var(--shadow-subtle);
 }
 
-/* Mobile responsive height */
 @media (max-width: 768px) {
   .project-image-div {
-    height: 260px;            /* consistent for mobile */
+    height: 260px;
   }
 }
 
-/* ===================================================================
-   CONTROLS (Arrows + Dots)
-   =================================================================== */
+/* Light mode image background */
+:root.light .project-image-div {
+  background: #f2f2f2 !important;
+}
+
+:root.light .project-image-div img {
+  background: #f2f2f2 !important;
+}
+
+/* ==========================
+   CAROUSEL CONTROLS
+   ========================== */
 .control-div {
   display: flex;
   justify-content: space-between;
@@ -183,9 +205,9 @@ body {
   background: var(--color-accent);
 }
 
-/* ===================================================================
+/* ==========================
    RESPONSIVE BEHAVIOR
-   =================================================================== */
+   ========================== */
 @media (max-width: 991px) {
   #project-section-1 {
     flex-direction: column;
@@ -219,9 +241,9 @@ body {
   }
 }
 
-/* ===================================================================
-   PREMIUM SCROLL ANIMATION (Smooth, Apple-Style)
-   =================================================================== */
+/* ==========================
+   ANIMATIONS
+   ========================== */
 .project-section {
   opacity: 0;
   transform: translateY(60px) scale(0.97);
@@ -238,7 +260,6 @@ body {
   filter: blur(0);
 }
 
-/* Staggered text */
 .project-section .stagger {
   opacity: 0;
   transform: translateY(25px);
@@ -256,7 +277,6 @@ body {
 .project-section.visible .stagger:nth-child(4) { transition-delay: 0.45s; }
 .project-section.visible .stagger:nth-child(5) { transition-delay: 0.55s; }
 
-/* Image reveal */
 .project-section .image-reveal {
   opacity: 0;
   transform: translateY(40px) scale(0.98);
@@ -269,19 +289,6 @@ body {
 
 .project-section.visible .image-reveal {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
   filter: blur(0);
-}
-.project-title,
-.project-desc,
-.project-tech {
-  color: var(--color-text-dark) !important;
-}
-
-:root.light .project-image-div {
-  background: #f2f2f2 !important;
-}
-
-:root.light .project-image-div img {
-  background: #f2f2f2 !important;
 }

@@ -24,7 +24,7 @@ function renderAllProjects(projects) {
 
   projects.forEach((project, index) => {
     const section = document.createElement("section");
-    section.className = "project-section py-5 fade-in-up";
+    section.className = "project-section  fade-in-up";
 
     section.innerHTML = `
       <div class="container custom-container gradient-border mx-auto mb-5">
@@ -58,7 +58,8 @@ function renderAllProjects(projects) {
           <!-- RIGHT - TEXT -->
           <div class="col-md-6">
             <h2 class="fw-bold mb-3 project-title">${project.title}</h2>
-            <p class="mb-2 project-desc">${project.description}</p>
+            <div class="mb-2 project-desc">${project.description}</div>
+
             <p class="mb-3 fw-bold project-tech">${project.techStack}</p>
             ${
               project.comingSoon

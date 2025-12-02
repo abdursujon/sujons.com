@@ -1,87 +1,86 @@
 [
-    {
-        "title": "PetWatch",
-       "description": "Full-stack app to help pet owner find their lost pets. Follows OOP fundamentals and MVC architecture<ul><li>Developed following the full SDLC process</li><li>Includes secure user authentication</li><li>Supports search, filters, and full CRUD operations</li></ul>",
-
-        "techStack": "Tech Stack: PHP, JavaScript, SQL, MySQL, SQlite, HTML5, CSS",
-        "comingSoon": true,
-        "link": "",
-        "images": [
-            "assets/projects/petwatch/1.png",
-            "assets/projects/petwatch/2.png",
-            "assets/projects/petwatch/3.png",
-            "assets/projects/petwatch/4.png",
-            "assets/projects/petwatch/5.png",
-            "assets/projects/petwatch/6.png",
-            "assets/projects/petwatch/7.png", 
-            "assets/projects/petwatch/8.png",
-            "assets/projects/petwatch/9.png",
-            "assets/projects/petwatch/10.png",
-            "assets/projects/petwatch/11.png",
-            "assets/projects/petwatch/12.png"
-        ]
-    },
-    {
-        "title": "Emilia's Della Roma",
-        "description": "Emilia's Della Roma replicates the core features of a real Italian restaurant website. Built with mobile-first approach with modern UX principles and real functionality including contact forms, postcode API, and dynamic UI.",
-        "techStack": "Tech Stack: PHP, HTML, JavaScript, Bootstrap, PHTML, PHPMailer, Figma, Postcode.io",
-        "link": "https://emilias-della-roma.netlify.app/",
-        "images": [
-            "assets/projects/project 1/1.png",
-            "assets/projects/project 1/2.png",
-            "assets/projects/project 1/3.png",
-            "assets/projects/project 1/4.png",
-            "assets/projects/project 1/5.png",
-            "assets/projects/project 1/6.png",
-            "assets/projects/project 1/7.png",
-            "assets/projects/project 1/8.png"
-        ]
-    },
-    {
-        "title": "Star Calculator",
-        "description": "A responsive modern calculator with full arithmetic functionality, multiple themes, and customizable fonts. Designed for smooth interaction and clean UI.",
-        "techStack": "Tech Stack: JavaScript, CSS, HTML, Bootstrap",
-        "link": "https://star-calulator.netlify.app/",
-        "images": [
-            "assets/projects/project 2/1.png",
-            "assets/projects/project 2/2.png",
-            "assets/projects/project 2/3.png"
-        ]
-    },
-    {
-        "title": "North Trafford GP (Clone)",
-        "description": "A bilingual GP check-in and department locator system inspired by NHS surgery interfaces. Built using HCI research to enhance user accessibility.",
-        "techStack": "Tech Stack: C#, .NET, HCI, Microsoft Visual Studio",
-        "link": "https://github.com/abdursujon/North-Trafford-Group-Practice-Clone/tree/main",
-        "images": [
-            "assets/projects/project 3/1.png",
-            "assets/projects/project 3/2.png",
-            "assets/projects/project 3/3.png"
-        ]
-    },
-    {
-        "title": "Sputnik Vehicle Hire System",
-        "description": "A Java-based rental management system that handles customers, vehicles, file storage, and reservation conflict detection.",
-        "techStack": "Tech Stack: Java, BlueJ",
-        "link": "https://github.com/abdursujon/sputnik-vehicle-hire",
-        "images": [
-            "assets/projects/project 4/1.png",
-            "assets/projects/project 4/2.png",
-            "assets/projects/project 4/3.png",
-            "assets/projects/project 4/4.png",
-            "assets/projects/project 4/5.png",
-            "assets/projects/project 4/6.png"
-        ]
-    },
-    {
-        "title": "Mew Mate",
-        "description": "A fun Tinder-style matchmaking app — for cats. Swipe cards, match profiles, and explore a playful UI demonstrating animations and responsive design.",
-        "techStack": "Tech Stack: JavaScript, CSS, HTML",
-        "link": "https://mewmate.netlify.app/",
-        "images": [
-            "assets/projects/project 5/1.png",
-            "assets/projects/project 5/2.png",
-            "assets/projects/project 5/3.png"
-        ]
-    }
+  {
+    "title": "PetWatch",
+    "description": "Full-stack app to help pet owners find their lost pets. Follows OOP fundamentals and MVC architecture.<ul><li>Developed following the full SDLC process</li><li>Secure user authentication system</li><li>Search, filters, and full CRUD operations</li></ul>",
+    "techStack": "Tech Stack: PHP, JavaScript, SQL, MySQL, SQlite, HTML5, CSS",
+    "comingSoon": true,
+    "link": "",
+    "images": [
+      "assets/projects/petwatch/1.png",
+      "assets/projects/petwatch/2.png",
+      "assets/projects/petwatch/3.png",
+      "assets/projects/petwatch/4.png",
+      "assets/projects/petwatch/5.png",
+      "assets/projects/petwatch/6.png",
+      "assets/projects/petwatch/7.png",
+      "assets/projects/petwatch/8.png",
+      "assets/projects/petwatch/9.png",
+      "assets/projects/petwatch/10.png",
+      "assets/projects/petwatch/11.png",
+      "assets/projects/petwatch/12.png"
+    ]
+  },
+  {
+    "title": "Emilia's Della Roma",
+    "description": "A full restaurant website built mobile-first with real functionality and modern UX principles.<ul><li>Fully responsive mobile-first layout</li><li>Dynamic UI with JavaScript components</li><li>Integrated postcode API lookup</li><li>Contact form powered by PHPMailer</li><li>Designed using Figma with UX-driven structure</li></ul>",
+    "techStack": "Tech Stack: PHP, HTML, JavaScript, Bootstrap, PHTML, PHPMailer, Figma, Postcode.io",
+    "link": "https://emilias-della-roma.netlify.app/",
+    "images": [
+      "assets/projects/project 1/1.png",
+      "assets/projects/project 1/2.png",
+      "assets/projects/project 1/3.png",
+      "assets/projects/project 1/4.png",
+      "assets/projects/project 1/5.png",
+      "assets/projects/project 1/6.png",
+      "assets/projects/project 1/7.png",
+      "assets/projects/project 1/8.png"
+    ]
+  },
+  {
+    "title": "Star Calculator",
+    "description": "A modern, responsive calculator featuring multiple themes and smooth UI interaction.<ul><li>Full arithmetic functionality</li><li>Three customizable themes</li><li>Dynamic font selection system</li><li>Mobile-first responsive layout</li></ul>",
+    "techStack": "Tech Stack: JavaScript, CSS, HTML, Bootstrap",
+    "link": "https://star-calulator.netlify.app/",
+    "images": [
+      "assets/projects/project 2/1.png",
+      "assets/projects/project 2/2.png",
+      "assets/projects/project 2/3.png"
+    ]
+  },
+  {
+    "title": "North Trafford GP (Clone)",
+    "description": "A bilingual GP check-in and department locator interface inspired by NHS systems.<ul><li>Built using human-computer-interaction principles</li><li>Designed for simplicity and accessibility</li><li>Bilingual interface for wider usability</li><li>Department locator system with clear visual layout</li></ul>",
+    "techStack": "Tech Stack: C#, .NET, HCI, Microsoft Visual Studio",
+    "link": "https://github.com/abdursujon/North-Trafford-Group-Practice-Clone/tree/main",
+    "images": [
+      "assets/projects/project 3/1.png",
+      "assets/projects/project 3/2.png",
+      "assets/projects/project 3/3.png"
+    ]
+  },
+  {
+    "title": "Sputnik Vehicle Hire System",
+    "description": "A Java-based rental system that manages customers, vehicles, and reservations.<ul><li>Handles full customer and vehicle records</li><li>Automatic file-based storage system</li><li>Prevents reservation conflicts</li><li>Clean modular Java architecture</li></ul>",
+    "techStack": "Tech Stack: Java, BlueJ",
+    "link": "https://github.com/abdursujon/sputnik-vehicle-hire",
+    "images": [
+      "assets/projects/project 4/1.png",
+      "assets/projects/project 4/2.png",
+      "assets/projects/project 4/3.png",
+      "assets/projects/project 4/4.png",
+      "assets/projects/project 4/5.png",
+      "assets/projects/project 4/6.png"
+    ]
+  },
+  {
+    "title": "Mew Mate",
+    "description": "A Tinder-style matchmaking interface created just for cats, with swipe-card interaction.<ul><li>Swipe left/right animations</li><li>Match confirmation UI</li><li>Playful, responsive design</li><li>Lightweight and fully client-side</li></ul>",
+    "techStack": "Tech Stack: JavaScript, CSS, HTML",
+    "link": "https://mewmate.netlify.app/",
+    "images": [
+      "assets/projects/project 5/1.png",
+      "assets/projects/project 5/2.png",
+      "assets/projects/project 5/3.png"
+    ]
+  }
 ]

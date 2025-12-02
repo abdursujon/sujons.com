@@ -83,62 +83,59 @@ document.addEventListener("DOMContentLoaded", function () {
   /* ======================================================
      THEME TOGGLE (DESKTOP + MOBILE)
   ====================================================== */
-  function initializeThemeToggle() {
-    const toggleBtn = document.getElementById("theme-toggle");   // desktop button
-    const themeIcon = document.getElementById("theme-icon");
-    const siteLogo = document.getElementById("logo-img");
-    const mobileIcon = document.getElementById("mobile-theme-icon"); // mobile icon
+function initializeThemeToggle() {
+  const toggleBtn = document.getElementById("theme-toggle");
+  const themeIcon = document.getElementById("theme-icon");
+  const siteLogo = document.getElementById("logo-img");
+  const mobileIcon = document.getElementById("mobile-theme-icon");
 
-    if (!toggleBtn || !themeIcon || !siteLogo) return;
+  // Ensure ALL required elements exist
+  if (!toggleBtn || !themeIcon || !siteLogo || !mobileIcon) return;
 
-    const savedTheme = localStorage.getItem("theme");
-    const startLight = savedTheme === "light";
+  const savedTheme = localStorage.getItem("theme");
+  const startLight = savedTheme === "light";
 
-    /* ---------- INITIAL LOAD ---------- */
-    if (startLight) {
-      document.documentElement.classList.add("light");
-      themeIcon.src = "assets/home/icon/moon.svg";
-      siteLogo.src = "assets/home/icon/logo_black.png";
-      if (mobileIcon) mobileIcon.src = "assets/home/icon/moon.svg";
-    } else {
-      document.documentElement.classList.remove("light");
-      themeIcon.src = "assets/home/icon/sun.svg";
-      siteLogo.src = "assets/home/icon/logo_white.png";
-      if (mobileIcon) mobileIcon.src = "assets/home/icon/sun.svg";
-    }
+  /* INITIAL LOAD */
+  if (startLight) {
+    document.documentElement.classList.add("light");
+    themeIcon.src = "assets/home/icon/moon.png";
+    mobileIcon.src = "assets/home/icon/moon.png";
+    siteLogo.src = "assets/home/icon/logo_black.png";
+  } else {
+    document.documentElement.classList.remove("light");
+    themeIcon.src = "assets/home/icon/sun.svg";
+    mobileIcon.src = "assets/home/icon/sun.svg";
+    siteLogo.src = "assets/home/icon/logo_white.png";
+  }
+
+  updateThemedIcons();
+
+  /* CLICK */
+  toggleBtn.addEventListener("click", () => {
+    document.documentElement.classList.toggle("light");
+    const isLight = document.documentElement.classList.contains("light");
+
+    themeIcon.src = isLight
+      ? "assets/home/icon/moon.png"
+      : "assets/home/icon/sun.svg";
+
+    mobileIcon.src = isLight
+      ? "assets/home/icon/moon.png"
+      : "assets/home/icon/sun.svg";
+
+    siteLogo.src = isLight
+      ? "assets/home/icon/logo_black.png"
+      : "assets/home/icon/logo_white.png";
+
+    localStorage.setItem("theme", isLight ? "light" : "dark");
 
     updateThemedIcons();
 
-    /* ---------- CLICK EVENT ---------- */
-    toggleBtn.addEventListener("click", () => {
-      document.documentElement.classList.toggle("light");
-      const isLight = document.documentElement.classList.contains("light");
+    document.body.classList.add("fade-theme");
+    setTimeout(() => document.body.classList.remove("fade-theme"), 300);
+  });
+}
 
-      // DESKTOP ICON
-      themeIcon.src = isLight
-        ? "assets/home/icon/moon.svg"
-        : "assets/home/icon/sun.svg";
-
-      // MOBILE ICON
-      if (mobileIcon) {
-        mobileIcon.src = isLight
-          ? "assets/home/icon/moon.svg"
-          : "assets/home/icon/sun.svg";
-      }
-
-      // LOGO
-      siteLogo.src = isLight
-        ? "assets/home/icon/logo_black.png"
-        : "assets/home/icon/logo_white.png";
-
-      localStorage.setItem("theme", isLight ? "light" : "dark");
-
-      updateThemedIcons();
-
-      document.body.classList.add("fade-theme");
-      setTimeout(() => document.body.classList.remove("fade-theme"), 300);
-    });
-  }
 
 
   /* ======================================================

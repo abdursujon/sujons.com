@@ -6,9 +6,11 @@
   --font-display: "Montserrat", sans-serif;
   --font-logo: "Montserrat Alternates", sans-serif;
   --font-effect: "Concert One", sans-serif;
-  --color-background-dark: #131314;
-  --color-navbar-footer: #161617;
+  --color-navbar-footer: #0f0f10;
+  --color-background-dark: #171718;
   --color-text-dark: #eaeaea;
+  --nav-hover-bg: rgba(255, 255, 255, 0.1);
+  --nav-hover-text: #ffffff;
   --color-text-light: #1d1d1f;
   --color-accent: #007aff;
   --radius-default: 16px;
@@ -20,76 +22,45 @@
   --color-skill-card-bg: rgba(255, 255, 255, 0.05);
 }
 
-/* LIGHT MODE */
 :root.light {
-  --color-background-dark: #ffffff;
-  --color-navbar-footer: #f7f7f7;
+  --nav-hover-bg: rgba(0, 0, 0, 0.06);
+  --nav-hover-text: #000000;
+  --color-navbar-footer: #ffffff;
+  --color-background-dark: #f5f5f7;
+  --color-section-bg: #f2f2f5;
+  --color-card-bg: #ffffff;
   --color-text-dark: #1d1d1f;
-  --color-text-light: #eaeaea;
+  --color-text-light: #6e6e73;
   --border-subtle: 1px solid rgba(0, 0, 0, 0.12);
-  --shadow-subtle: 0 4px 10px rgba(0, 0, 0, 0.08);
-  --shadow-lift: 0 0 30px rgba(0, 0, 0, 0.15);
-
-}
-
-/* Toggle button style */
-.theme-toggle-btn {
-  background: none;
-  border: none;
-  margin-left: 10px;
-  cursor: pointer;
-  padding: 4px;
-}
-
-.theme-toggle-btn img {
-  width: 22px;
-  height: 22px;
-  filter: brightness(0) invert(1);
-  transition: 0.2s ease;
-}
-
-/* Light mode icon invert fix */
-:root.light .theme-toggle-btn img {
-  filter: brightness(0);
+  --shadow-subtle: 0 4px 10px rgba(0, 0, 0, 0.06);
+  --shadow-lift: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --skill-bg: #ffffff;
+  --skill-card-bg: #ffffff;
+  --skill-progress-bg: rgba(0, 0, 0, 0.15);
 }
 
 
 /* ===================================================================
    GLOBAL & TYPOGRAPHY
    =================================================================== */
-html {
-  height: 100%;
-
-}
+html { height: 100%; }
 
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-   background: var(--color-background-dark);
+  background: var(--color-background-dark);
 }
 
-main {
-  flex: 1;
-}
+main { flex: 1; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-dark);
   font-family: var(--font-display);
 }
 
-h1 {
-  font-size: 48px;
-}
-
-h2 {
-  margin-top: 50px;
-}
+h1 { font-size: 48px; }
+h2 { margin-top: 50px; }
 
 p {
   font-weight: 400;
@@ -97,41 +68,37 @@ p {
   line-height: 1.6;
 }
 
-hr {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
+hr { border: 1px solid rgba(255, 255, 255, 0.2); }
 
-#section-1, #section-2, #section-3, #section-4{
-  margin-top:50px;
+#section-1, #section-2, #section-3, #section-4 {
   margin-bottom: 50px;
 }
+
+#section-1 { margin-top: 100px; }
+#section-2, #section-3, #section-4 { margin-top: 50px; }
+
+
 /* ===================================================================
    NAVIGATION
    =================================================================== */
 .custom-navbar {
   position: fixed !important;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 1030;
   background-color: var(--color-navbar-footer) !important;
   border-bottom: var(--border-subtle);
   box-shadow: var(--shadow-subtle);
   height: 60px;
-  /* unified height */
   display: flex;
   align-items: center;
-  /* ensures vertical centering */
 }
 
-/* Make brand content flex-aligned */
 .navbar-brand.custom-brand {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-/* Logo scaling (auto-centers perfectly in 60px navbar) */
 #logo-img {
   height: 30px;
   width: auto;
@@ -144,19 +111,15 @@ hr {
   stroke: var(--color-text-dark);
 }
 
-/* --- LOGO ANIMATION RESTORED --- */
 .split-text-container {
   display: flex;
   font-size: 20px;
   font-weight: bold;
   font-family: var(--font-logo);
-  text-transform: none;
   overflow: hidden;
 }
 
 .text-part {
-  display: inline-block;
-  position: relative;
   transform: translateX(0);
   animation-duration: 2s;
   animation-timing-function: ease-out;
@@ -166,8 +129,8 @@ hr {
 
 .text-part.left {
   transform: translateX(-200%);
-  animation-name: slide-in-left;
   margin-right: 6px;
+  animation-name: slide-in-left;
 }
 
 .text-part.right {
@@ -176,37 +139,18 @@ hr {
 }
 
 @keyframes slide-in-left {
-  0% {
-    transform: translateX(-200%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
+  0% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
 }
 
 @keyframes slide-in-right {
-  0% {
-    transform: translateX(200%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
+  0% { transform: translateX(200%); }
+  100% { transform: translateX(0); }
 }
 
-/* --- END LOGO ANIMATION RESTORED --- */
+.navbar-toggler { border: none; }
+.navbar-toggler:focus { box-shadow: none; }
 
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-  outline: none;
-}
-
-/* STYLE LINKS AS BUTTONS */
 .navbar-nav .nav-link {
   font-family: var(--font-display);
   font-weight: 700;
@@ -215,15 +159,15 @@ hr {
   color: var(--color-text-dark);
   padding: 6px 14px;
   border-radius: var(--radius-button);
-  transition: all 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover {
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
+  background-color: var(--nav-hover-bg);
+  color: var(--nav-hover-text);
   box-shadow: 0 0 10px rgba(0, 122, 255, 0.2);
   transform: translateY(-1px);
+  text-decoration: none;
 }
 
 .contact-link {
@@ -232,35 +176,47 @@ hr {
   padding: 6px 14px;
   margin: 5px 10px;
   border-radius: var(--radius-button);
-  transition: all 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   text-decoration: none;
 }
 
 .contact-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 10px rgba(0, 122, 255, 0.2);
+  background-color: rgba(255,255,255,0.1);
+  box-shadow: 0 0 10px rgba(0,122,255,0.2);
   transform: translateY(-1px);
 }
 
 .contact-link img,
 .footer-icon img {
-  filter: none;
   height: 25px;
   width: 25px;
+  filter: none;
 }
-
 
 .navbar-collapse .navbar-nav {
   text-align: left;
   margin-left: 20px;
 }
+.theme-toggle-btn{
+  border: none !important;
+  background:transparent;
+}
+
+:root .theme-toggle-btn img {
+  filter: invert(1);
+  border:1px solid black;
+  padding:2px;
+  border:none;
+}
+
+:root.light .theme-toggle-btn img {
+  filter: none;
+}
+
 
 /* ===================================================================
    SECTION 1: HERO & INTRO
    =================================================================== */
-#section-1{
-  margin-top:100px;
-}
 .hero-contact-btn {
   margin-top: 20px;
   background: var(--color-accent);
@@ -274,24 +230,22 @@ hr {
   transition: 0.25s ease;
   box-shadow: var(--shadow-subtle);
 }
-
 .hero-contact-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 15px rgba(0, 122, 255, 0.45);
+  box-shadow: 0 0 15px rgba(0,122,255,0.45);
 }
 
-/* Light mode hover adjustments */
 :root.light .hero-contact-btn:hover {
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
 }
 
 .profile {
   width: 100%;
   max-width: 400px;
-  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .profile img {
@@ -299,21 +253,19 @@ hr {
   height: 300px;
   object-fit: cover;
   border-radius: 50%;
-  margin-top: 0;
-  margin-bottom: 0;
-  border: none;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
 }
 
 
 /* ===================================================================
-   SECTION 2: What I love
+   SECTION 2: WHAT I LOVE
    =================================================================== */
-
 #section-2 {
-  background: var(--color-background-dark);
-  padding-top: 60px;
   overflow: hidden;
+  background-color: rgba(255,255,255,0.1);
+}
+
+:root.light #section-2 {
+  background-color: #ebebee !important;
 }
 
 .scrolling-wrapper {
@@ -323,6 +275,7 @@ hr {
 }
 
 .scrolling-text {
+  padding-top: 10px;
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--color-text-dark);
@@ -331,15 +284,88 @@ hr {
   animation: scrollText 18s linear infinite;
 }
 
-/* Animation */
 @keyframes scrollText {
-  0% {
-    transform: translateX(0);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
 
-  100% {
-    transform: translateX(-100%);
-  }
+
+/* ===================================================================
+   SECTION 3: ABOUT ME
+   =================================================================== */
+#section-3 { background-color: var(--color-background-dark); padding: 50px 0; }
+
+.about-3-container {
+  padding: 80px;
+  border-radius: 25px;
+  background-color: rgba(255,255,255,0.05);
+}
+
+:root.light .about-3-container {
+  background-color: #ffffff;
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.about-3-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--color-text-dark);
+}
+
+.about-3-subtitle {
+  margin-top: -10px;
+  color: var(--color-accent);
+  margin-bottom: 40px;
+}
+
+.about-3-img-wrapper {
+  width: 100%;
+  max-width: 400px;
+  margin: 0;
+}
+
+.about-3-img-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 50px !important;
+  object-fit: cover;
+}
+
+.about-3-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-dark);
+}
+
+.about-3-stats { margin-top: 30px; }
+
+.stat-box h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+.stat-box p {
+  margin-top: -5px;
+  color: var(--color-text-dark);
+}
+
+.about-3-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: var(--color-accent);
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.2s ease;
+  margin-top: 20px;
+}
+
+.about-3-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0,122,255,0.4);
 }
 
 
@@ -348,9 +374,7 @@ hr {
    =================================================================== */
 .footer-container {
   position: relative;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: 0; left: 0; right: 0;
   z-index: 1020;
   background-color: var(--color-navbar-footer) !important;
   border-top: var(--border-subtle);
@@ -359,22 +383,37 @@ hr {
 
 .footer-icon {
   padding: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 5px 10px;
 }
-
 
 .rights {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255,255,255,0.6);
   font-size: 0.7rem;
 }
+
 
 /* ===================================================================
    MEDIA QUERIES
    =================================================================== */
 
+/* ========================== max-width: 768px ========================== */
+@media (max-width:768px) {
 
-@media (max-width: 991px) {
+  .about-3-container { padding: 20px; }
+
+  .about-3-img-wrapper img {
+    max-width: 350px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .stat-box h2 { font-size: 26px; }
+}
+
+
+/* ========================== max-width: 991px ========================== */
+@media (max-width:991px) {
+
   .navbar-collapse {
     position: absolute;
     top: 60px;
@@ -409,7 +448,6 @@ hr {
     margin-left: 10px;
   }
 
-  /* ================= Hero Section FIXED ================== */
   .profile {
     align-items: center !important;
     justify-content: center !important;
@@ -426,14 +464,7 @@ hr {
     padding: 10px 0;
   }
 
-  .footer-icon img {
-    height: 18px;
-    width: 18px;
-  }
-
-  .rights {
-    font-size: 0.65rem;
-  }
+  .rights { font-size: 0.65rem; }
 
   #section-1 .hero-title,
   #section-1 .hero-icons,
@@ -442,20 +473,16 @@ hr {
     text-align: center;
   }
 
-  #section-1 .hero-icons span {
-    display: inline-block;
-  }
-
   #section-1 .hero-contact-btn {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
   }
-
 }
 
-@media (min-width: 992px) {
+
+/* ========================== min-width: 992px ========================== */
+@media (min-width:992px) {
   .profile img {
     width: 350px;
     height: 350px;
