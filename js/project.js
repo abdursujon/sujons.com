@@ -18,67 +18,54 @@ async function loadProjects() {
 /* ======================================================
    RENDER ALL PROJECTS AS SEPARATE SECTIONS
    ====================================================== */
-
 function renderAllProjects(projects) {
   const container = document.getElementById("projects-container");
 
   projects.forEach((project, index) => {
     const section = document.createElement("section");
-    section.className = "project-section  fade-in-up";
+    section.className = "project-section fade-in-up ";
 
     section.innerHTML = `
-      <div class="container custom-container gradient-border mx-auto mb-5">
+      <div class="container custom-container gradient-border mx-auto mb-5 shadow-lg ">
+        <div class="row">
 
-        <div class="row justify-content-center">
+          <div class="col-sm-6">
+  <div id="carousel-${index}" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      ${project.images.map((img, i) => `
+        <div class="carousel-item ${i === 0 ? 'active' : ''}">
+          <img src="${img}" class="d-block w-100 rounded" alt="project images">
+        </div>
+      `).join("")}
+    </div>
 
-          <!-- LEFT - IMAGE -->
-          <div class="col-md-6 mb-4">
-            <div class="project-image-div">
-              <img 
-                src="${project.images[0]}"
-                loading="lazy"
-                class="img-fluid w-100 h-100"
-                id="img-${index}"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-position: contain;
-                "
-              >
-            </div>
+    <div class="control-div d-flex justify-content-center mt-3 gap-2">
+      <button class="arrow-btn btn btn-outline-secondary"
+        data-bs-target="#carousel-${index}" data-bs-slide="prev">‹</button>
 
-            <div class="control-div d-flex justify-content-center mt-3 gap-2">
-              <button class="arrow-btn btn btn-outline-secondary" onclick="prevImage(${index})">‹</button>
-              <button class="arrow-btn btn btn-outline-secondary" onclick="nextImage(${index})">›</button>
-            </div>
+      <button class="arrow-btn btn btn-outline-secondary"
+        data-bs-target="#carousel-${index}" data-bs-slide="next">›</button>
+    </div>
 
-            <div id="dots-${index}" class="mt-3 d-flex justify-content-center"></div>
-          </div>
+  </div>
+</div>
 
-          <!-- RIGHT - TEXT -->
-          <div class="col-md-6">
+          <div class="col-sm-6 ">
             <h2 class="fw-bold mb-3 project-title">${project.title}</h2>
             <div class="mb-2 project-desc">${project.description}</div>
-
             <p class="mb-3 fw-bold project-tech">${project.techStack}</p>
-            ${
-              project.comingSoon
-                ? `<span class="badge bg-secondary p-2">Coming Soon</span>`
-                : `<a href="${project.link}" target="_blank" class="btn btn-dark mb-3">Launch</a>`
-            }
+
+            ${project.comingSoon
+        ? `<span class="badge bg-secondary p-2">Coming Soon</span>`
+        : `<a href="${project.link}" target="_blank" class="btn btn-dark mb-3">Launch</a>`
+      }
           </div>
+
         </div>
       </div>
     `;
 
     container.appendChild(section);
-
-    projectStates[index] = {
-      images: project.images,
-      current: 0
-    };
-
-    renderDots(index);
   });
 
   setupScrollObserver();
@@ -96,7 +83,7 @@ function renderImage(idx) {
   img.loading = "lazy";
   img.src = state.images[state.current];
 
-  img.classList.add("img-fluid", "w-100", "h-100");
+  img.classList.add("img-fluid", "w-100");
 
   // FULL IMAGE, NO CROPPING
   img.style.objectFit = "contain";
