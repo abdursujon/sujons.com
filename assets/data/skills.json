@@ -7,7 +7,6 @@
       { "name": "Java", "level": 90 },
       { "name": "JavaScript", "level": 90 },
       { "name": "PHP", "level": 75 },
-      { "name": "C#", "level": 45 },
       { "name": "SQL", "level": 90 }
     ]
   },
@@ -17,7 +16,7 @@
     "experience": "3+ Years XP",
     "icon": "frontend",
     "skills": [
-      { "name": "React", "level": 60 },
+      { "name": "ReactJS", "level": 60 },
       { "name": "HTML5", "level": 98 },
       { "name": "CSS", "level": 85 },
       { "name": "Bootstrap", "level": 90 },
@@ -32,24 +31,22 @@
     "icon": "server",
     "skills": [
       { "name": "MySQL", "level": 85 },
-      { "name": "Spring Boot", "level": 60 },
       { "name": "REST API", "level": 60 },
       { "name": "JSON", "level": 90 },
-      { "name": "JUnit", "level": 60 },
-      { "name": "CI/CD", "level": 60 }
+      { "name": "PHPUnit", "level": 60 }
     ]
   },
 
   {
-    "category": "DevOps",
+    "category": "DevOps/Tools",
     "experience": "1+ Years XP",
     "icon": "devops",
     "skills": [
       { "name": "Linux", "level": 70 },
       { "name": "Git", "level": 90 },
-      { "name": "GitHub", "level": 90 },
       { "name": "Jira", "level": 80 },
-      { "name": "Docker", "level": 70 }
+      { "name": "Docker", "level": 70 },
+      { "name": "CI/CD", "level": 70 }
     ]
   }
 ]
