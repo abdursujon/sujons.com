@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* ======================================================
-     LOAD HEADER + FOOTER
-  ====================================================== */
+  // Load header
   const loadComponent = (url, placeholderId) => {
     fetch(url)
       .then((response) => {
@@ -13,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const placeholder = document.getElementById(placeholderId);
         if (placeholder) placeholder.innerHTML = data;
 
-        // AFTER HEADER LOAD
         if (placeholderId === "header-placeholder") {
           initializeNavbar();
           initializeThemeToggle();
@@ -21,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
           updateThemedIcons();
         }
 
-        // AFTER FOOTER LOAD
         if (placeholderId === "footer-placeholder") {
           updateThemedIcons();
         }
@@ -35,9 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   loadComponent("components/footer.html", "footer-placeholder");
 
 
-  /* ======================================================
-     NAVBAR BURGER ICON
-  ====================================================== */
+  // Process navbar menu 
   function initializeNavbar() {
     const menuButton = document.querySelector(".custom-navbar-toggler");
     if (!menuButton) return;
@@ -63,9 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  /* ======================================================
-     UPDATE THEMABLE ICONS
-  ====================================================== */
+  // Update theme icon
   function updateThemedIcons() {
     const icons = document.querySelectorAll(".themed-icon");
     const isLight = document.documentElement.classList.contains("light");
@@ -80,22 +72,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  /* ======================================================
-     THEME TOGGLE (DESKTOP + MOBILE)
-  ====================================================== */
+// Theme toggele 
 function initializeThemeToggle() {
   const toggleBtn = document.getElementById("theme-toggle");
   const themeIcon = document.getElementById("theme-icon");
   const siteLogo = document.getElementById("logo-img");
   const mobileIcon = document.getElementById("mobile-theme-icon");
 
-  // Ensure ALL required elements exist
   if (!toggleBtn || !themeIcon || !siteLogo || !mobileIcon) return;
 
   const savedTheme = localStorage.getItem("theme");
   const startLight = savedTheme === "light";
 
-  /* INITIAL LOAD */
   if (startLight) {
     document.documentElement.classList.add("light");
     themeIcon.src = "assets/home/icon/moon.png";
@@ -110,7 +98,6 @@ function initializeThemeToggle() {
 
   updateThemedIcons();
 
-  /* CLICK */
   toggleBtn.addEventListener("click", () => {
     document.documentElement.classList.toggle("light");
     const isLight = document.documentElement.classList.contains("light");
@@ -138,25 +125,19 @@ function initializeThemeToggle() {
 
 
 
-  /* ======================================================
-     MOBILE THEME TOGGLE SYNC (xs-md)
-  ====================================================== */
+  
   function setupMobileToggleSync() {
     const mobileBtn = document.querySelector(".mobile-theme-toggle");
     const desktopBtn = document.getElementById("theme-toggle");
 
     if (!mobileBtn || !desktopBtn) return;
-
-    // Mobile forwards click to desktop toggle
     mobileBtn.addEventListener("click", () => {
       desktopBtn.click();
     });
   }
 
 
-  /* ======================================================
-     GREETING
-  ====================================================== */
+  // Greeting
   function greetTheVisitor() {
     const hour = new Date().getHours();
     if (hour < 12) return "Good morning";
