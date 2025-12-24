@@ -123,9 +123,6 @@ function initializeThemeToggle() {
   });
 }
 
-
-
-  
   function setupMobileToggleSync() {
     const mobileBtn = document.querySelector(".mobile-theme-toggle");
     const desktopBtn = document.getElementById("theme-toggle");
@@ -134,20 +131,6 @@ function initializeThemeToggle() {
     mobileBtn.addEventListener("click", () => {
       desktopBtn.click();
     });
-  }
-
-
-  // Greeting
-  function greetTheVisitor() {
-    const hour = new Date().getHours();
-    if (hour < 12) return "Good morning";
-    if (hour < 18) return "Good afternoon";
-    return "Good evening";
-  }
-
-  const greetingElement = document.getElementById("greeting");
-  if (greetingElement) {
-    greetingElement.innerHTML = `Hi there - ${greetTheVisitor()}`;
   }
 
 });
