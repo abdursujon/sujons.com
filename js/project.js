@@ -1,7 +1,4 @@
-/* ======================================================
-   LOAD PROJECTS FROM JSON
-   ====================================================== */
-
+// Load project data from json file
 async function loadProjects() {
   try {
     const res = await fetch("assets/data/projects.json");
@@ -15,9 +12,7 @@ async function loadProjects() {
   }
 }
 
-/* ======================================================
-   RENDER ALL PROJECTS AS SEPARATE SECTIONS
-   ====================================================== */
+// Render all project as seperate section
 function renderAllProjects(projects) {
   const container = document.getElementById("projects-container");
 
@@ -71,10 +66,7 @@ function renderAllProjects(projects) {
   setupScrollObserver();
 }
 
-/* ======================================================
-   CAROUSEL STATE HANDLING
-   ====================================================== */
-
+// Carousal state handles 
 const projectStates = {};
 
 function renderImage(idx) {
@@ -85,7 +77,6 @@ function renderImage(idx) {
 
   img.classList.add("img-fluid", "w-100");
 
-  // FULL IMAGE, NO CROPPING
   img.style.objectFit = "contain";
 
   updateDots(idx);
@@ -131,10 +122,7 @@ function prevImage(idx) {
   renderImage(idx);
 }
 
-/* ======================================================
-   SCROLL ANIMATION
-   ====================================================== */
-
+// Scroll animation
 function setupScrollObserver() {
   const observer = new IntersectionObserver(
     entries => {
@@ -154,9 +142,6 @@ function setupScrollObserver() {
   });
 }
 
-/* ======================================================
-   INIT
-   ====================================================== */
 loadProjects();
 window.nextImage = nextImage;
 window.prevImage = prevImage;
