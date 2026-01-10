@@ -1,25 +1,6 @@
-# Portfolio Website
+# Welcome to Sujon's Portfolio Website
 
-Personal portfolio website showcasing my profile, skills, projects, and experience.
+The purpose of this web app is to showcase my projects and skill section with more details about me. 
+This project also strengthen my skill in building a web application from scratch and improve my skill in JavaScript, Bootstrap, and HTML.
 
-## Overview
-
-- **Home**  
-  Brief introduction about me and what I do. 
-
-- **Skills**  
-  Technical skills, tools, and technologies with percentage base UI. 
-
-- **Projects**  
-  Selected projects with descriptions, features, and links.
-
-- **CV**  
-  Downloadable curriculum vitae.
-
-- **Social Links**  
-  Links to GitHub, LinkedIn, and other platforms.
-
-## Purpose
-
-Central place to present my work, skills, and professional profile.
-
+You can visit the website at [sujons.com](https://sujons.com)
