@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   loadSkills();
 });
 
-// Load JSON
 function loadSkills() {
   fetch("assets/data/skills.json")
     .then(res => res.json())
@@ -10,7 +9,6 @@ function loadSkills() {
     .catch(err => console.error("Failed to load skills.json:", err));
 }
 
-// Render categories + accordion
 function renderSkills(categories) {
   const container = document.querySelector(".custom-container-skills");
   if (!container) return;
@@ -30,7 +28,6 @@ function renderSkills(categories) {
   initAccordions();
 }
 
-// Create category block (left side)
 function createCategoryHTML(category, index) {
   return `
     <div class="skill-category" data-index="${index}">
@@ -48,14 +45,13 @@ function createCategoryHTML(category, index) {
 
       <div class="skill-items">
         ${category.skills
-          .map(skill => createSkillBar(skill))
-          .join("")}
+      .map(skill => createSkillBar(skill))
+      .join("")}
       </div>
     </div>
   `;
 }
 
-// Create skill progress bar (right side)
 function createSkillBar(skill) {
   return `
     <div class="skill-bar">
@@ -68,7 +64,6 @@ function createSkillBar(skill) {
   `;
 }
 
-// SVG icon mapping
 function getIcon(type) {
   const icons = {
     code: "💻",
@@ -79,7 +74,6 @@ function getIcon(type) {
   return icons[type] || "🔧";
 }
 
-// Accordion logic
 function initAccordions() {
   const categories = document.querySelectorAll(".skill-category");
 
@@ -89,10 +83,7 @@ function initAccordions() {
     header.addEventListener("click", () => {
       const isOpen = cat.classList.contains("open");
 
-      // Close all
       document.querySelectorAll(".skill-category").forEach(c => c.classList.remove("open"));
-
-      // Open this
       if (!isOpen) cat.classList.add("open");
     });
   });

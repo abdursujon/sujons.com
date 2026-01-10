@@ -1,6 +1,12 @@
+(function () {
+  const saved = localStorage.getItem("theme");
+  if (saved === "light") {
+    document.documentElement.classList.add("light");
+  }
+})();
+
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Load header
   const loadComponent = (url, placeholderId) => {
     fetch(url)
       .then((response) => {
@@ -30,8 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
   loadComponent("components/header.html", "header-placeholder");
   loadComponent("components/footer.html", "footer-placeholder");
 
-
-  // Process navbar menu 
   function initializeNavbar() {
     const menuButton = document.querySelector(".custom-navbar-toggler");
     if (!menuButton) return;
@@ -57,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  // Update theme icon
   function updateThemedIcons() {
     const icons = document.querySelectorAll(".themed-icon");
     const isLight = document.documentElement.classList.contains("light");
@@ -72,56 +75,55 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-// Theme toggele 
-function initializeThemeToggle() {
-  const toggleBtn = document.getElementById("theme-toggle");
-  const themeIcon = document.getElementById("theme-icon");
-  const siteLogo = document.getElementById("logo-img");
-  const mobileIcon = document.getElementById("mobile-theme-icon");
+  function initializeThemeToggle() {
+    const toggleBtn = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
+    const siteLogo = document.getElementById("logo-img");
+    const mobileIcon = document.getElementById("mobile-theme-icon");
 
-  if (!toggleBtn || !themeIcon || !siteLogo || !mobileIcon) return;
+    if (!toggleBtn || !themeIcon || !siteLogo || !mobileIcon) return;
 
-  const savedTheme = localStorage.getItem("theme");
-  const startLight = savedTheme === "light";
+    const savedTheme = localStorage.getItem("theme");
+    const startLight = savedTheme === "light";
 
-  if (startLight) {
-    document.documentElement.classList.add("light");
-    themeIcon.src = "assets/home/icon/moon.png";
-    mobileIcon.src = "assets/home/icon/moon.png";
-    siteLogo.src = "assets/home/icon/logo_black.png";
-  } else {
-    document.documentElement.classList.remove("light");
-    themeIcon.src = "assets/home/icon/sun.svg";
-    mobileIcon.src = "assets/home/icon/sun.svg";
-    siteLogo.src = "assets/home/icon/logo_white.png";
-  }
-
-  updateThemedIcons();
-
-  toggleBtn.addEventListener("click", () => {
-    document.documentElement.classList.toggle("light");
-    const isLight = document.documentElement.classList.contains("light");
-
-    themeIcon.src = isLight
-      ? "assets/home/icon/moon.png"
-      : "assets/home/icon/sun.svg";
-
-    mobileIcon.src = isLight
-      ? "assets/home/icon/moon.png"
-      : "assets/home/icon/sun.svg";
-
-    siteLogo.src = isLight
-      ? "assets/home/icon/logo_black.png"
-      : "assets/home/icon/logo_white.png";
-
-    localStorage.setItem("theme", isLight ? "light" : "dark");
+    if (startLight) {
+      document.documentElement.classList.add("light");
+      themeIcon.src = "assets/home/icon/moon.png";
+      mobileIcon.src = "assets/home/icon/moon.png";
+      siteLogo.src = "assets/home/icon/logo_black.png";
+    } else {
+      document.documentElement.classList.remove("light");
+      themeIcon.src = "assets/home/icon/sun.svg";
+      mobileIcon.src = "assets/home/icon/sun.svg";
+      siteLogo.src = "assets/home/icon/logo_white.png";
+    }
 
     updateThemedIcons();
 
-    document.body.classList.add("fade-theme");
-    setTimeout(() => document.body.classList.remove("fade-theme"), 300);
-  });
-}
+    toggleBtn.addEventListener("click", () => {
+      document.documentElement.classList.toggle("light");
+      const isLight = document.documentElement.classList.contains("light");
+
+      themeIcon.src = isLight
+        ? "assets/home/icon/moon.png"
+        : "assets/home/icon/sun.svg";
+
+      mobileIcon.src = isLight
+        ? "assets/home/icon/moon.png"
+        : "assets/home/icon/sun.svg";
+
+      siteLogo.src = isLight
+        ? "assets/home/icon/logo_black.png"
+        : "assets/home/icon/logo_white.png";
+
+      localStorage.setItem("theme", isLight ? "light" : "dark");
+
+      updateThemedIcons();
+
+      document.body.classList.add("fade-theme");
+      setTimeout(() => document.body.classList.remove("fade-theme"), 300);
+    });
+  }
 
   function setupMobileToggleSync() {
     const mobileBtn = document.querySelector(".mobile-theme-toggle");

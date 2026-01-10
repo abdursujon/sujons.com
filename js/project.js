@@ -1,4 +1,3 @@
-// Load project data from json file
 async function loadProjects() {
   try {
     const res = await fetch("assets/data/projects.json");
@@ -12,7 +11,6 @@ async function loadProjects() {
   }
 }
 
-// Render all project as seperate section
 function renderAllProjects(projects) {
   const container = document.getElementById("projects-container");
 
@@ -66,7 +64,6 @@ function renderAllProjects(projects) {
   setupScrollObserver();
 }
 
-// Carousal state handles 
 const projectStates = {};
 
 function renderImage(idx) {
@@ -122,7 +119,6 @@ function prevImage(idx) {
   renderImage(idx);
 }
 
-// Scroll animation
 function setupScrollObserver() {
   const observer = new IntersectionObserver(
     entries => {

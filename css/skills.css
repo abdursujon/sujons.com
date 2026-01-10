@@ -1,12 +1,9 @@
-
-/* DEFAULT = DARK MODE */
 :root {
   --skill-bg: rgba(255, 255, 255, 0.07);
   --skill-card-bg: rgba(255, 255, 255, 0.10);
   --skill-progress-bg: rgba(255, 255, 255, 0.20);
 }
 
-/* LIGHT MODE OVERRIDES */
 :root.light {
   --skill-bg: rgba(0, 0, 0, 0.04);
   --skill-card-bg: rgba(0, 0, 0, 0.06);
@@ -30,10 +27,6 @@
   stroke: #ffffff !important;
 }
 
-
-/* ==========================
-   BASE SKILLS SECTION
-   ========================== */
 .skills-wrapper {
   margin-top: 40px;
 }
@@ -74,7 +67,6 @@
   max-height: 500px;
 }
 
-/* Progress bars */
 .skill-bar {
   margin-bottom: 18px;
 }
