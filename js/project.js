@@ -10,13 +10,12 @@ async function loadProjects() {
   }
 }
 
-
 function renderAllProjects(projects) {
   const container = document.getElementById("projects-container");
 
   container.innerHTML = `
     <div class="container">
-      <div class="row g-4" id="projects-grid"></div>
+      <div class="row g-4 mb-5" id="projects-grid"></div>
     </div>
   `;
 
@@ -24,17 +23,17 @@ function renderAllProjects(projects) {
 
   projects.forEach((project, index) => {
     const col = document.createElement("div");
-    col.className = "col-12 col-lg-6";
+    col.className = "col-12 col-lg-6 project-loader";
 
     col.innerHTML = `
       <section class="project-section fade-in-up h-100">
-        <div class="project-card h-100">
+        <div class="project-card h-100  border border-secondary px-4 py-4 rounded">
 
           <div class="project-image">
             <img
               src="${project.images[0]}"
               alt="${project.title}"
-              class="img-fluid"
+              class="img-fluid rounded"
             />
           </div>
 
@@ -49,17 +48,27 @@ function renderAllProjects(projects) {
               ${project.techStack
                 .replace("Tech Stack:", "")
                 .split(",")
-                .map(t => `<span class="tech-pill">${t.trim()}</span>`)
+                .map((t) => `<span class="tech-pill">${t.trim()}</span>`)
                 .join("")}
             </div>
+
+            ${
+              project.title === "Spring Data Analysis API"
+                ? `<div class="mt-4">
+                      By launching, you can only access the root endpoint.
+                      To use the API, see README.md in the project repository.
+                    </div>`
+                : ``
+            }
+
 
             <div class="project-actions">
               ${
                 project.showLaunch === false
                   ? ``
                   : project.comingSoon
-                    ? `<span class="badge bg-secondary">Coming Soon</span>`
-                    : `<a href="${project.link}" target="_blank" class="btn btn-dark">Launch</a>`
+                  ? `<span class="badge bg-secondary">Coming Soon</span>`
+                  : `<a href="${project.link}" target="_blank" class="btn btn-dark mt-4 me-3">Launch</a>`
               }
 
               ${
@@ -67,7 +76,7 @@ function renderAllProjects(projects) {
                   ? `
                     <div class="position-relative d-inline-block">
                       <button
-                        class="btn btn-outline-secondary"
+                        class="btn view-code mt-4"
                         onclick="toggleRepoPopover(event, ${index})"
                       >
                         View Code
@@ -83,8 +92,8 @@ function renderAllProjects(projects) {
                     </div>
                   `
                   : project.repo
-                    ? `<a href="${project.repo}" target="_blank" class="btn btn-outline-secondary">View Code</a>`
-                    : ``
+                  ? `<a href="${project.repo}" target="_blank" class="btn view-code mt-4 pl-4">View Code</a>`
+                  : ``
               }
             </div>
           </div>
@@ -99,29 +108,24 @@ function renderAllProjects(projects) {
   setupScrollObserver();
 }
 
-
-
 // Show toggle pop for private repo
 function toggleRepoPopover(e, index) {
   e.stopPropagation();
-  document.querySelectorAll(".repo-popover").forEach(p =>
-    p.classList.add("d-none")
-  );
+  document
+    .querySelectorAll(".repo-popover")
+    .forEach((p) => p.classList.add("d-none"));
   const popover = document.getElementById(`repo-popover-${index}`);
   popover.classList.toggle("d-none");
-
 }
-window. toggleRepoPopover =  toggleRepoPopover;
+window.toggleRepoPopover = toggleRepoPopover;
 
 // Handle even listener to click on view code, if anywhere else clicked on the project view, remove the pop alert
 document.addEventListener("click", (e) => {
   if (e.target.closest(".repo-popover")) return;
-  document.querySelectorAll(".repo-popover").forEach(p =>
-    p.classList.add("d-none")
-  );
+  document
+    .querySelectorAll(".repo-popover")
+    .forEach((p) => p.classList.add("d-none"));
 });
-
-
 
 const projectStates = {};
 
@@ -185,17 +189,16 @@ function setupScrollObserver() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-        } else {
-          entry.target.classList.remove("visible");
+          observer.unobserve(entry.target);
         }
       });
     },
     { threshold: 0.15 }
   );
 
-  document.querySelectorAll(".project-section").forEach((section) => {
-    observer.observe(section);
-  });
+  document
+    .querySelectorAll(".project-section")
+    .forEach((section) => observer.observe(section));
 }
 
 loadProjects();
