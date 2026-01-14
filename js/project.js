@@ -5,64 +5,123 @@ async function loadProjects() {
 
     const projects = await res.json();
     renderAllProjects(projects);
-
   } catch (err) {
     console.error(err);
   }
 }
 
+
 function renderAllProjects(projects) {
   const container = document.getElementById("projects-container");
 
+  container.innerHTML = `
+    <div class="container">
+      <div class="row g-4" id="projects-grid"></div>
+    </div>
+  `;
+
+  const grid = document.getElementById("projects-grid");
+
   projects.forEach((project, index) => {
-    const section = document.createElement("section");
-    section.className = "project-section fade-in-up ";
+    const col = document.createElement("div");
+    col.className = "col-12 col-lg-6";
 
-    section.innerHTML = `
-      <div class="container custom-container gradient-border mx-auto mb-5 shadow-lg ">
-        <div class="row">
+    col.innerHTML = `
+      <section class="project-section fade-in-up h-100">
+        <div class="project-card h-100">
 
-          <div class="col-sm-6">
-  <div id="carousel-${index}" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      ${project.images.map((img, i) => `
-        <div class="carousel-item ${i === 0 ? 'active' : ''}">
-          <img src="${img}" class="d-block w-100 rounded" alt="project images">
-        </div>
-      `).join("")}
-    </div>
+          <div class="project-image">
+            <img
+              src="${project.images[0]}"
+              alt="${project.title}"
+              class="img-fluid"
+            />
+          </div>
 
-    <div class="control-div d-flex justify-content-center mt-3 gap-2">
-      <button class="arrow-btn btn btn-outline-secondary"
-        data-bs-target="#carousel-${index}" data-bs-slide="prev">‹</button>
+          <div class="project-body">
+            <h2 class="project-title fw-bold">${project.title}</h2>
 
-      <button class="arrow-btn btn btn-outline-secondary"
-        data-bs-target="#carousel-${index}" data-bs-slide="next">›</button>
-    </div>
+            <div class="project-desc">
+              ${project.description}
+            </div>
 
-  </div>
-</div>
+            <div class="tech-stack">
+              ${project.techStack
+                .replace("Tech Stack:", "")
+                .split(",")
+                .map(t => `<span class="tech-pill">${t.trim()}</span>`)
+                .join("")}
+            </div>
 
-          <div class="col-sm-6 ">
-            <h2 class="fw-bold mb-3 project-title">${project.title}</h2>
-            <div class="mb-2 project-desc">${project.description}</div>
-            <p class="mb-3 fw-bold project-tech">${project.techStack}</p>
+            <div class="project-actions">
+              ${
+                project.showLaunch === false
+                  ? ``
+                  : project.comingSoon
+                    ? `<span class="badge bg-secondary">Coming Soon</span>`
+                    : `<a href="${project.link}" target="_blank" class="btn btn-dark">Launch</a>`
+              }
 
-            ${project.comingSoon
-        ? `<span class="badge bg-secondary p-2">Coming Soon</span>`
-        : `<a href="${project.link}" target="_blank" class="btn btn-dark mb-3">Launch</a>`
-      }
+              ${
+                project.repo === "private"
+                  ? `
+                    <div class="position-relative d-inline-block">
+                      <button
+                        class="btn btn-outline-secondary"
+                        onclick="toggleRepoPopover(event, ${index})"
+                      >
+                        View Code
+                      </button>
+                      <div
+                        id="repo-popover-${index}"
+                        class="repo-popover d-none"
+                        onclick="event.stopPropagation()"
+                      >
+                        <strong>PRIVATE GITHUB REPOSITORY</strong>
+                        <div>Please contact me for code</div>
+                      </div>
+                    </div>
+                  `
+                  : project.repo
+                    ? `<a href="${project.repo}" target="_blank" class="btn btn-outline-secondary">View Code</a>`
+                    : ``
+              }
+            </div>
           </div>
 
         </div>
-      </div>
+      </section>
     `;
 
-    container.appendChild(section);
+    grid.appendChild(col);
   });
 
   setupScrollObserver();
 }
+
+
+
+// Show toggle pop for private repo
+function toggleRepoPopover(e, index) {
+  e.stopPropagation();
+  document.querySelectorAll(".repo-popover").forEach(p =>
+    p.classList.add("d-none")
+  );
+  const popover = document.getElementById(`repo-popover-${index}`);
+  popover.classList.toggle("d-none");
+
+}
+window. toggleRepoPopover =  toggleRepoPopover;
+
+// Handle even listener to click on view code, if anywhere else clicked on the project view, remove the pop alert
+document.addEventListener("click", (e) => {
+  if (e.target.closest(".repo-popover")) return;
+  document.querySelectorAll(".repo-popover").forEach(p =>
+    p.classList.add("d-none")
+  );
+});
+
+
 
 const projectStates = {};
 
@@ -115,14 +174,15 @@ function nextImage(idx) {
 
 function prevImage(idx) {
   const state = projectStates[idx];
-  state.current = (state.current - 1 + state.images.length) % state.images.length;
+  state.current =
+    (state.current - 1 + state.images.length) % state.images.length;
   renderImage(idx);
 }
 
 function setupScrollObserver() {
   const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
+    (entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
         } else {
@@ -133,7 +193,7 @@ function setupScrollObserver() {
     { threshold: 0.15 }
   );
 
-  document.querySelectorAll(".project-section").forEach(section => {
+  document.querySelectorAll(".project-section").forEach((section) => {
     observer.observe(section);
   });
 }

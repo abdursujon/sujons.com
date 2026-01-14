@@ -1,82 +1,80 @@
 [
   {
+    "title": "Spring Data Analysis API",
+    "description": "Spring Data Analysis API is a Spring Boot–based data analysis REST service that ingests CSV files and automatically profiles their structure and content. It extracts metadata such as column types, null counts, and statistical summaries, then persists results for later retrieval. The API is designed for real-world data engineering workflows including dataset exploration, data quality assessment, and ETL validation.<p><strong>Key capabilities</strong></p><ul><li>CSV ingestion and automatic data profiling</li><li>Column type detection and null count analysis</li><li>Statistical summaries for numeric fields</li><li>Persistent storage of analysis results</li><li>REST endpoints for upload, download, and deletion</li><li>Swagger UI for interactive API testing</li></ul>",
+    "techStack": "Tech Stack: Java 17, Spring Boot 3, Gradle, GCP, JPA, H2, Lombok, JUnit 5, Linux",
+    "showLaunch": false,
+    "repo": "https://github.com/abdursujon/spring-data-analysis-api",
+    "images": ["assets/projects/1.png"]
+  },
+
+  {
+    "title": "BCS Student Placement Portal",
+    "description": "BCS Student Placement Portal is a web-based placement matching system developed for BCS Manchester to increase undergraduate placement uptake by matching university students with employers offering year-long industrial placements. The system supports students, employers, university career staff, and administrators, with matching logic aligned to SFIA Version 8.<p><strong>Key capabilities</strong></p><ul><li>Role-based user accounts for students, employers, career staff, and administrators</li><li>Session-based authentication and access control</li><li>Student profile management with CV upload (PDF)</li><li>SFIA v8 skill and level management</li><li>Placement creation, management, and shortlisting</li><li>Skill-based placement matching and notifications</li><li>Career staff dashboards for monitoring outcomes</li><li>Responsive UI with role-specific dashboards</li></ul>",
+    "techStack": "Tech Stack: PHP, SQLite, Bootstrap 5, HTML5, CSS3, JavaScript, SFIA v8",
+    "link": "http://columnist-carnival.poseidon.salford.ac.uk/HackCamp/index.php",
+    "repo": "private",
+    "images": ["assets/projects/2.png"]
+  },
+
+  {
+    "title": "Transform My Raw Data",
+    "description": "Transform My Raw Data is a data analysis platform that turns uploaded files into structured insights. It validates input, processes large datasets, and returns detailed statistical results in real time.<p><strong>Actions you can perform</strong></p><ul><li>Automatic validation and error reporting</li><li>Real-time progress tracking</li><li>Detailed statistical insights</li><li>Downloadable analysis results</li></ul>",
+    "techStack": "Tech Stack: React, TypeScript, Node.js, Vite, Tailwind",
+    "link": "https://abdursujon.github.io/transform-my-raw-data/",
+    "repo": "private",
+    "images": ["assets/projects/3.png"]
+  },
+  {
     "title": "PetWatch",
     "description": "Full-stack app to help pet owners find their lost pets. Follows OOP fundamentals and MVC architecture.<ul><li>Developed following the full SDLC process</li><li>Secure user authentication system</li><li>Search, filters, and full CRUD operations</li></ul>",
     "techStack": "Tech Stack: PHP, JavaScript, SQL, MySQL, SQlite, HTML5, CSS",
     "comingSoon": true,
     "link": "",
-    "images": [
-      "assets/projects/petwatch/1.png",
-      "assets/projects/petwatch/2.png",
-      "assets/projects/petwatch/3.png",
-      "assets/projects/petwatch/4.png",
-      "assets/projects/petwatch/5.png",
-      "assets/projects/petwatch/6.png",
-      "assets/projects/petwatch/7.png",
-      "assets/projects/petwatch/8.png",
-      "assets/projects/petwatch/9.png",
-      "assets/projects/petwatch/10.png",
-      "assets/projects/petwatch/11.png",
-      "assets/projects/petwatch/12.png"
-    ]
+    "repo": "private",
+    "images": ["assets/projects/4.png"]
   },
   {
     "title": "Emilia's Della Roma",
     "description": "A full restaurant website built mobile-first with real functionality and modern UX principles.<ul><li>Fully responsive mobile-first layout</li><li>Dynamic UI with JavaScript components</li><li>Integrated postcode API lookup</li><li>Contact form powered by PHPMailer</li><li>Designed using Figma with UX-driven structure</li></ul>",
     "techStack": "Tech Stack: PHP, HTML, JavaScript, Bootstrap, PHTML, PHPMailer, Figma, Postcode.io",
     "link": "https://emilias-della-roma.netlify.app/",
-    "images": [
-      "assets/projects/project 1/1.png",
-      "assets/projects/project 1/2.png",
-      "assets/projects/project 1/3.png",
-      "assets/projects/project 1/4.png"
-    ]
+    "repo": "https://github.com/abdursujon/your-repo",
+    "images": ["assets/projects/5.png"]
   },
   {
-    "title": "Star Calculator",
-    "description": "A modern, responsive calculator featuring multiple themes and smooth UI interaction.<ul><li>Full arithmetic functionality</li><li>Three customizable themes</li><li>Dynamic font selection system</li><li>Mobile-first responsive layout</li></ul>",
-    "techStack": "Tech Stack: JavaScript, CSS, HTML, Bootstrap",
-    "link": "https://star-calulator.netlify.app/",
-    "images": [
-      "assets/projects/project 2/1.png",
-      "assets/projects/project 2/2.png",
-      "assets/projects/project 2/3.png"
-    ]
+    "title": "Vehicle Hire System",
+    "description": "A Java-based rental system that manages customers, vehicles, and reservations.<ul><li>Handles full customer and vehicle records</li><li>Automatic file-based storage system</li><li>Prevents reservation conflicts</li><li>Clean modular Java architecture</li></ul>",
+    "techStack": "Tech Stack: Java, BlueJ",
+    "link": "https://github.com/abdursujon/sputnik-vehicle-hire",
+    "repo": "https://github.com/abdursujon/your-repo",
+    "images": ["assets/projects/6.png"]
   },
+
   {
     "title": "North Trafford GP (Clone)",
     "description": "A bilingual GP check-in and department locator interface inspired by NHS systems.<ul><li>Built using human-computer-interaction principles</li><li>Designed for simplicity and accessibility</li><li>Bilingual interface for wider usability</li><li>Department locator system with clear visual layout</li></ul>",
     "techStack": "Tech Stack: C#, .NET, HCI, Microsoft Visual Studio",
     "link": "https://github.com/abdursujon/North-Trafford-Group-Practice-Clone/tree/main",
-    "images": [
-      "assets/projects/project 3/1.png",
-      "assets/projects/project 3/2.png",
-      "assets/projects/project 3/3.png"
-    ]
+    "repo": "https://github.com/abdursujon/your-repo",
+    "images": ["assets/projects/7.png"]
   },
+
   {
-    "title": "Sputnik Vehicle Hire System",
-    "description": "A Java-based rental system that manages customers, vehicles, and reservations.<ul><li>Handles full customer and vehicle records</li><li>Automatic file-based storage system</li><li>Prevents reservation conflicts</li><li>Clean modular Java architecture</li></ul>",
-    "techStack": "Tech Stack: Java, BlueJ",
-    "link": "https://github.com/abdursujon/sputnik-vehicle-hire",
-    "images": [
-      "assets/projects/project 4/1.png",
-      "assets/projects/project 4/2.png",
-      "assets/projects/project 4/3.png",
-      "assets/projects/project 4/4.png",
-      "assets/projects/project 4/5.png",
-      "assets/projects/project 4/6.png"
-    ]
+    "title": "Star Calculator",
+    "description": "A modern, responsive calculator featuring multiple themes and smooth UI interaction.<ul><li>Full arithmetic functionality</li><li>Three customizable themes</li><li>Dynamic font selection system</li><li>Mobile-first responsive layout</li></ul>",
+    "techStack": "Tech Stack: JavaScript, CSS, HTML, Bootstrap",
+    "link": "https://star-calulator.netlify.app/",
+    "repo": "https://github.com/abdursujon/your-repo",
+    "images": ["assets/projects/8.png"]
   },
+
   {
     "title": "Mew Mate",
-    "description": "A Tinder-style matchmaking interface created just for cats, with swipe-card interaction.<ul><li>Swipe left/right animations</li><li>Match confirmation UI</li><li>Playful, responsive design</li><li>Lightweight and fully client-side</li></ul>",
+    "description": "Ok this is not a serious project, but if you are a cat lover like me, you would want to have a website page something do with cat! Let's get your cat a partner, so they don't get lonely! Tinder-style matchmaking interface created just for cats, with swipe-card interaction (Or you can pretend you are swiping). <ul><li>Swipe left/right animations</li><li>Match confirmation UI</li><li>Playful, responsive design</li><li>Lightweight and fully client-side</li></ul>",
     "techStack": "Tech Stack: JavaScript, CSS, HTML",
     "link": "https://mewmate.netlify.app/",
-    "images": [
-      "assets/projects/project 5/1.png",
-      "assets/projects/project 5/2.png",
-      "assets/projects/project 5/3.png"
-    ]
+    "repo": "https://github.com/abdursujon/your-repo",
+    "images": ["assets/projects/9.png"]
   }
 ]
