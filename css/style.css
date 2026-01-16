@@ -295,6 +295,61 @@ hr {
   filter: none;
 }
 
+/* Hero section for sm - md */
+.hero-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-dark);
+}
+
+.hero-icons {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-subtitle {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+}
+
+.hero-subtitle {
+  color: var(--color-text-light);
+}
+
+:root:not(.light) {
+  --color-text-light: #bdbdbd;
+}
+
+.hero-contact-btn {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--radius-button);
+  cursor: pointer;
+  box-shadow: var(--shadow-subtle);
+}
+
+.hero-contact-btn {
+  background-color: #111827;
+  color: #ffffff;
+}
+
+:root:not(.light) .hero-contact-btn {
+  background-color: #000000;
+}
+.hero-contact-btn:hover {
+  filter: brightness(1.1);
+}
+
+
 /* Side bar */
 .sticky-sidebar {
   position: sticky;
