@@ -1,3 +1,6 @@
+/**
+ * Fetches project data from JSON and triggers rendering.
+ */
 async function loadProjects() {
   try {
     const res = await fetch("assets/data/projects.json");
@@ -10,6 +13,9 @@ async function loadProjects() {
   }
 }
 
+/**
+ * Renders all project cards into the projects grid container.
+ */
 function renderAllProjects(projects) {
   const container = document.getElementById("projects-container");
 
@@ -38,7 +44,7 @@ function renderAllProjects(projects) {
           </div>
 
           <div class="project-body">
-            <h2 class="project-title fw-bold">${project.title}</h2>
+            <h2 class="project-title fw-bold mt-4">${project.title}</h2>
 
             <div class="project-desc">
               ${project.description}
@@ -108,7 +114,9 @@ function renderAllProjects(projects) {
   setupScrollObserver();
 }
 
-// Show toggle pop for private repo
+/**
+ * Toggles visibility of private repository popover.
+ */
 function toggleRepoPopover(e, index) {
   e.stopPropagation();
   document
@@ -119,7 +127,9 @@ function toggleRepoPopover(e, index) {
 }
 window.toggleRepoPopover = toggleRepoPopover;
 
-// Handle even listener to click on view code, if anywhere else clicked on the project view, remove the pop alert
+/**
+ * Closes all repository popovers when clicking outside.
+ */
 document.addEventListener("click", (e) => {
   if (e.target.closest(".repo-popover")) return;
   document
@@ -129,6 +139,9 @@ document.addEventListener("click", (e) => {
 
 const projectStates = {};
 
+/**
+ * Renders the current image for a project carousel.
+ */
 function renderImage(idx) {
   const state = projectStates[idx];
   const img = document.getElementById(`img-${idx}`);
@@ -142,6 +155,9 @@ function renderImage(idx) {
   updateDots(idx);
 }
 
+/**
+ * Creates dot indicators for carousel navigation.
+ */
 function renderDots(idx) {
   const state = projectStates[idx];
   const dotsEl = document.getElementById(`dots-${idx}`);
@@ -161,6 +177,9 @@ function renderDots(idx) {
   updateDots(idx);
 }
 
+/**
+ * Updates active state of carousel dot indicators.
+ */
 function updateDots(idx) {
   const state = projectStates[idx];
   const dots = document.getElementById(`dots-${idx}`).children;
@@ -170,12 +189,18 @@ function updateDots(idx) {
   }
 }
 
+/**
+ * Navigates to next image in carousel.
+ */
 function nextImage(idx) {
   const state = projectStates[idx];
   state.current = (state.current + 1) % state.images.length;
   renderImage(idx);
 }
 
+/**
+ * Navigates to previous image in carousel.
+ */
 function prevImage(idx) {
   const state = projectStates[idx];
   state.current =
@@ -183,6 +208,9 @@ function prevImage(idx) {
   renderImage(idx);
 }
 
+/**
+ * Sets up intersection observer for scroll-triggered animations.
+ */
 function setupScrollObserver() {
   const observer = new IntersectionObserver(
     (entries) => {

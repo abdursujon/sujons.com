@@ -1,5 +1,9 @@
 body {
-  background-color: var(--color-background-dark);
+  background-color: var(--color-background);
+}
+
+.project-card {
+  background: var(--color-card-bg);
 }
 
 :root.light .dot {
@@ -155,7 +159,6 @@ body {
   background: var(--color-accent);
 }
 
-/* Css for tech stack */
 .tech-stack {
   display: flex;
   flex-wrap: wrap;

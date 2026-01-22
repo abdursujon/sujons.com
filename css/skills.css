@@ -1,7 +1,7 @@
 :root {
   --skill-bg: rgba(255, 255, 255, 0.07);
-  --skill-card-bg: rgba(255, 255, 255, 0.10);
-  --skill-progress-bg: rgba(255, 255, 255, 0.20);
+  --skill-card-bg: rgba(255, 255, 255, 0.1);
+  --skill-progress-bg: rgba(255, 255, 255, 0.2);
 }
 
 :root.light {
@@ -10,29 +10,12 @@
   --skill-progress-bg: rgba(0, 0, 0, 0.15);
 }
 
-:root:not(.light) .skill-category {
-  background: var(--skill-card-bg) !important;
-  color: #ffffff !important;
-}
-
-:root:not(.light) .skill-cat-header,
-:root:not(.light) .skill-title,
-:root:not(.light) .skill-icon,
-:root:not(.light) .left-side {
-  color: #ffffff !important;
-}
-
-:root:not(.light) .arrow {
-  color: #ffffff !important;
-  stroke: #ffffff !important;
-}
-
 .skills-wrapper {
   margin-top: 40px;
 }
 
 .skill-category {
-  background: var(--skill-bg);
+  background: var(--skill-card-bg);
   border: var(--border-subtle);
   border-radius: 16px;
   padding: 20px;
@@ -45,16 +28,19 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  color: var(--color-text-dark);
 }
 
 .left-side {
   display: flex;
   align-items: center;
   gap: 15px;
+  color: var(--color-text-dark);
 }
 
 .skill-icon {
   font-size: 28px;
+  color: var(--color-text-dark);
 }
 
 .skill-items {
@@ -76,6 +62,7 @@
   justify-content: space-between;
   font-weight: bold;
   font-size: 14px;
+  color: var(--color-text-dark);
 }
 
 .progress {
@@ -90,12 +77,19 @@
   height: 100%;
   background: #7b61ff;
   border-radius: 50px;
+  transition: width 0.4s ease;
+}
+
+.arrow {
+  font-size: 40px;
+  color: var(--color-text-dark);
+  transition: transform 0.3s ease;
 }
 
 .skill-category.open .arrow {
   transform: rotate(180deg);
 }
 
-.arrow {
-  font-size: 40px;
+.skills-subtitle {
+  color: var(--color-text-light);
 }

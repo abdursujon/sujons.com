@@ -1,3 +1,6 @@
+/**
+ * Immediately applies saved theme preference before DOM loads to prevent flash.
+ */
 (function () {
   const saved = localStorage.getItem("theme");
   if (saved === "light") {
@@ -6,7 +9,9 @@
 })();
 
 document.addEventListener("DOMContentLoaded", function () {
-
+  /**
+   * Fetches and injects HTML component into placeholder element.
+   */
   const loadComponent = (url, placeholderId) => {
     fetch(url)
       .then((response) => {
@@ -28,14 +33,15 @@ document.addEventListener("DOMContentLoaded", function () {
           updateThemedIcons();
         }
       })
-      .catch((error) =>
-        console.error("Error loading component:", error)
-      );
+      .catch((error) => console.error("Error loading component:", error));
   };
 
   loadComponent("components/header.html", "header-placeholder");
   loadComponent("components/footer.html", "footer-placeholder");
 
+  /**
+   * Initializes mobile navbar toggle with animated hamburger/close icon.
+   */
   function initializeNavbar() {
     const menuButton = document.querySelector(".custom-navbar-toggler");
     if (!menuButton) return;
@@ -60,12 +66,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-
+  /**
+   * Updates all themed icons based on current light/dark mode.
+   */
   function updateThemedIcons() {
     const icons = document.querySelectorAll(".themed-icon");
     const isLight = document.documentElement.classList.contains("light");
 
-    icons.forEach(icon => {
+    icons.forEach((icon) => {
       const lightSrc = icon.getAttribute("data-light");
       const darkSrc = icon.getAttribute("data-dark");
       if (lightSrc && darkSrc) {
@@ -74,7 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-
+  /**
+   * Sets up theme toggle button with icon switching and localStorage persistence.
+   */
   function initializeThemeToggle() {
     const toggleBtn = document.getElementById("theme-toggle");
     const themeIcon = document.getElementById("theme-icon");
@@ -125,6 +135,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  /**
+   * Syncs mobile theme toggle button clicks to trigger desktop toggle.
+   */
   function setupMobileToggleSync() {
     const mobileBtn = document.querySelector(".mobile-theme-toggle");
     const desktopBtn = document.getElementById("theme-toggle");
@@ -134,5 +147,4 @@ document.addEventListener("DOMContentLoaded", function () {
       desktopBtn.click();
     });
   }
-
 });
