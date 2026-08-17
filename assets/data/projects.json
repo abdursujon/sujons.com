@@ -25,14 +25,5 @@
     "showLaunch": true,
     "repo": "private",
     "images": ["assets/projects/4.png"]
-  },  
-
-  {
-    "title": "Emilia's Della Roma",
-    "description": "A demo full restaurant website built mobile-first with real functionality and modern UX principles.<ul><li>Fully responsive mobile-first layout</li><li>Dynamic UI with JavaScript components</li><li>Integrated postcode API lookup</li><li>Contact form powered by PHPMailer</li><li>Designed using Figma with UX-driven structure</li></ul>",
-    "techStack": "Tech Stack: PHP, HTML, JavaScript, Bootstrap, PHTML, PHPMailer, Figma, Postcode.io",
-    "link": "https://emilias-della-roma.netlify.app/",
-    "repo": "https://github.com/abdursujon/emilias-della-roma",
-    "images": ["assets/projects/5.png"]
   }
 ]
